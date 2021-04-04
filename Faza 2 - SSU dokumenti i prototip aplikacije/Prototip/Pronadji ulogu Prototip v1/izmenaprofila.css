@@ -1,0 +1,75 @@
+/*Đorđe Milinović*/
+.mainView{
+    position: absolute;
+    /*border:2px solid rgb(42, 85, 165);*/
+    top:0%;
+    left:14%;
+    height: 90%;
+    width: 72%;
+    margin: auto;
+    margin-top: 0%;
+    align-content: center;
+}
+img{
+    position: relative;
+    border-radius: 50%;
+    border:2px solid rgb(58, 58, 131);
+    width: 380px;
+    height: 380px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-bottom: 0%;
+}
+
+table{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:0%;
+    padding-top: 0%;
+    top:-5%;
+}
+input{
+    color: #606770;
+    font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 22px;
+    margin-right: 20%;
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-top: 2px;
+    
+    
+}
+#buttonSave{
+    position: relative;
+    top:35%;
+    left:40%;
+    width: 200px;
+    height:32px;
+    border-radius: 4px;
+    font-weight: normal;
+    color:whitesmoke;
+    background-color: rgb(58, 58, 131);
+    align-content: center;
+}
+label{
+    display: inline;
+    color: #606770;
+    font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    margin-right: 20%;
+    line-height: 20px;
+    margin-bottom: 0;
+   
+}
+td{
+    padding-left: 10%;
+}
+body{
+    margin-top: 0%;
+    padding-top: 0%;
+    /*background-color: rgb(147, 217, 226);*/
+}

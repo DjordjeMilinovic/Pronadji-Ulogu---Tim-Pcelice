@@ -1,0 +1,115 @@
+/*Autor: Jelena Pančevski*/
+.Body{
+    display: inline-block;
+    margin: 20px;
+    position: relative;
+    text-align: left;
+    margin-top: 0px;
+}
+body{
+    padding-top:-100px;
+    padding-left:32%;
+    
+}
+h1{ margin-top: 0px;
+    padding-top: 0px;
+    padding-left:35%;
+    color:#606770;
+    /*display:blockinline*/;
+}
+.TextBoxes
+{
+    border-radius: 4px;
+    color: #1c1e21;
+    font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    height: 36px;
+    width: 335px;
+    line-height: 20px
+
+}
+.Type {
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #0e101362;
+    box-sizing: border-box;
+    display: inline-block;
+    flex: 1 0 auto;
+    font-weight: normal;
+    height: 36px;
+    margin: 8px 0px 6px;
+    text-align: center;
+    padding-top:3px;
+    width: 100px;
+    font-size: 16px;
+    line-height: 20px
+}
+  
+.button {
+   text-align: center;
+   padding-left:-50%;
+   padding-right: 50px;
+   padding-top:8px ;
+}
+.button button{
+    width: 180px;
+    height:35px;
+    border-radius: 4px;
+    font-weight: bolder;
+    color:whitesmoke;
+    background-color: darkcyan;
+    align-content: center;
+    
+}
+.CastingType{
+    border-radius: 4px;
+    border-width: 2px;
+    border-color: rgb(110, 109, 109);
+    color: #1c1e21;
+    font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    height: 40px;
+    width: 228px;
+    line-height: 20px 
+}
+#Category{
+    border-radius: 4px;
+    color: #393c41;
+    font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    height: 36px;
+    line-height: 20px
+}
+
+    #description{
+    border-radius: 4px;
+    color: #393c41;
+    font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20px;
+    resize:none;
+
+    }
+    
+    .Coordinates{
+    width: 300px;
+    height: 300px;
+    padding-bottom: 100px;
+    left:50%;
+    top:10%;
+    }
+    .Boxes{
+        border-radius: 4px;
+        color: #1c1e21;
+        font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+        height: 36px;
+        width: 195px;
+        line-height: 20px
+    }
+    

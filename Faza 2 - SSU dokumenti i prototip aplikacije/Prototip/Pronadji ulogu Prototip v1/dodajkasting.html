@@ -1,0 +1,63 @@
+<!--Autor: Jelena Pančevski-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dodajkasting.css">
+    <title>Document</title>
+</head>
+<body class="Body">
+    <form>
+    <h1>Kasting</h1>
+    <div>
+        <input type="textbox" class="TextBoxes" placeholder="Naziv kastinga" required/>
+        <label id="Category" >Kategorija:</label>
+            <span>
+                <select name="KategorijaKastinga" class="CastingType" required>
+                    <option value="Film">
+                    Film
+                    </option>
+                    <option value="Pozorište">
+                    Pozorište
+                    </option>
+                </select>
+            </span>
+        <br>
+        <br>
+        
+            <table> 
+                <tr>
+           <td><textarea id="description" name="description" placeholder="Opis kastinga" rows="25" cols="40" ></textarea>
+           </td>
+           <td>
+               <div>
+                   <div class="Coordinates"> Profile picture
+                   <form action="/action_page.php">
+                       <input type="file" id="myFile" name="filename" accept="image/gif, image/jpeg, image/png">
+                     </form>
+                   </div>
+                   <span data-type="radio" class="radiobuttons">
+                       <span class="Type">
+                       <label>Glumac</label>
+                       <input type="checkbox" value="1" name="Glumac"></span>
+                       <input type="number" class="Boxes" placeholder="Broj potrebnih glumaca"/> <br>
+                      <span class="Type">
+                       <label>Statista</label>
+                       <input type="checkbox" name="Statista"></span>
+                       <input type="number" class="Boxes" placeholder="Broj potrebnih statista"/>
+                    </span>
+               </div>
+               
+               </td>
+           
+            </table>
+                       
+               <div class="button"><a href= "profil.html" target="blank " ><button type="submit">Postavi kasting</button></a></div>
+        </div>
+        </form>
+
+ 
+</body>
+</html>

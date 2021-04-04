@@ -1,0 +1,49 @@
+<!--Autor: Jelena Pančevski-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="projekat.css">
+</head>
+<body>
+    <div class="Header">
+        <ul>
+            <li class="SiteName">Pronađi ulogu</li>
+            <li class="SiteMenus">
+                <div class="Casting">Kastinzi 
+                <div class="DropdownCasting">
+                    <a href="#"onclick="loadcastings()">Televizija</a>
+                    <a href="#"onclick="loadcastings()">Pozorište</a>
+                    <a href="#"onclick="loadcastings()">Svi kastinzi</a>
+            </div>
+        </div>
+        </li>
+        <li class="SiteMenus"><a class="SiteMenus" href="#"onclick="loadforum()">Forum </a></li>
+        <li class="UserPassword">Username: <input type ="text" name ="Username" value="" required/></li>
+        <li class="UserPassword">Password: <input type ="password" name ="Password" value="" required/></li>
+        <li class="UserPassword"><a href= "profil.html" target="blank " ><input type="submit" name="Login" value="Login"/></a></li>
+        </li>
+        
+            
+            <li class="UserPassword"><input type="button" name="Register" value="Register" onclick="loadform()"></a></li>
+          </ul>
+    </div>
+    <div id="content" class="SelectedOption">
+    </div>
+    <script>
+    function loadform(file) {
+        document.getElementById("content").innerHTML='<object type="text/html" data="registracija.html" ></object>';
+    }
+    function loadforum(file) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="forum.html" ></object>';
+}
+    
+function loadcastings(file) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="pregledKastinga.html" ></object>';
+}
+    </script>
+</body>
+</html>

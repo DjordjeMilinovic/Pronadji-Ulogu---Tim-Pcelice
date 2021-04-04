@@ -1,0 +1,41 @@
+<!--Autor: Jelena Pančevski-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dodajcontent.css">
+    <title>Document</title>
+</head>
+<body class="Body">
+    <h1>Monolog</h1>
+    <form>
+        <div>
+            <div >
+                <input type="textbox" class="TextBoxes" placeholder="Naziv dela" required/>
+                <br>
+                <input type="textbox" class="TextBoxes" placeholder="Ime autora" required/>
+                <br>
+                <input type="textbox" class="TextBoxes" placeholder="Prezime autora" required/>
+                <br>
+            <div><p class="TypeOfContent">Vrsta monologa</p>
+                    <span class="VP">
+                        <select name="TipMonologa" class="SongMonologType">
+                            <option value="Drama">Dramski</option><option value="Komedija">Komični</option>
+                        </select>
+                        
+                    </span>
+                </div>
+                
+            </div>
+            <form action="/action_page.php">
+                <input type="file" id="myFile" name="filename" accept="video/mp4, video/mov, video/wmv, video/flv, video/avi" required>
+              </form>
+            
+            <div class="button"><a href= "profil.html" target="blank" ><button type="submit">Postavi monolog</button></a></div>
+        </div>
+        
+    </form>
+</body>
+</html>

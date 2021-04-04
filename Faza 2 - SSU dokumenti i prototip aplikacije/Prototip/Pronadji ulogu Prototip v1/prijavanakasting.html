@@ -1,0 +1,33 @@
+<!--Autor: Jelena Pančevski-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="prijavanakasting.css">
+    <title>Document</title>
+</head>
+<body class="Body">
+    <h1 class="Title">Prijava na kasting</h1>
+    <div >
+        <input type="textbox" class="TextBoxes" placeholder="Ime" maxlength="20"/>
+        <br>
+        <input type="textbox" class="TextBoxes" placeholder="Prezime"  maxlength="20"/>
+        <br>
+        <input type="textbox" class="TextBoxes" placeholder="E-mail"  maxlength="20"/>
+        <br>
+    
+        <form action="/action_page.php">
+            <label class="Text">Postavi cv</label> <br> 
+            <input type="file" id="CV" name="filename" accept=".doc,.docx,.pdf">
+          </form>
+          <form action="/action_page.php">
+            <label class="Text">Postavi sliku</label> <br>
+            <input type="file" id="Picture" name="filename" accept="image/gif, image/jpeg, image/png">
+          </form>
+
+    </div>
+    <div class="button"><a href= "profil.html" target="blank " ><button type="submit">Prijavite se</button></a></div>
+</body>
+</html>

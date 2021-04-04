@@ -1,0 +1,14 @@
+Projekat.html predstavlja pocetnu stranu sajta kada ni jedan korisnik nije  prijavljen. 
+Ovde se mogu videti sve funkcionalnosti za korisnika koji nije prijavljen.
+
+Klikom na dugme login preusmerava se na profil.html sto predstavlja pocetnu stranu 
+prijavljenog korisnika. Odavde se mogu videti sve funkcionalnosti registrovanog korisnika. 
+
+Reditelj.html predstavlja pocetnu stranu sajta za prijavljenog reditelja. Odavde se mogu 
+videti sve funkcionalnosti reditelja.
+
+Administrator.html predstavlja pocetnu stranu sajta za administratora. Odavde se mogu 
+videti sve funkcionalnosti administratora.
+
+*Izgled stranica moze da varira u zavisnosti od velicine ekrana jer je u pitanju prototip, ukoliko 
+nesto ne izgleda pregledno probajte da zoom in/out stranicu.

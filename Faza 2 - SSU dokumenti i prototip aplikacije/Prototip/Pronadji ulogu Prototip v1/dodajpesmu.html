@@ -1,0 +1,42 @@
+<!--Autor: Jelena Pančevski-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dodajcontent.css">
+    <title>Document</title>
+</head>
+<body class="Body">
+    <h1>Pesma</h1>
+    <form>
+        <div>
+                <div >
+                    <input type="textbox" class="TextBoxes" placeholder="Naziv pesme" required/>
+                    <br>
+                    <input type="textbox" class="TextBoxes" placeholder="Ime autora" required/>
+                    <br>
+                    <input type="textbox" class="TextBoxes" placeholder="Prezime autora" required/>
+                    <br>
+                <div><p class="TypeOfContent">Vrsta pesme</p>
+                        <span class="VP">
+                            <select name="TipPesme" class="SongMonologType">
+                                <option value="Epika">Epska</option><option value="Lirika">Lirska</option>
+                            </select>
+                            
+                        </span>
+                    </div>
+                    
+                </div>
+                <form action="/action_page.php">
+                    <input type="file" id="myFile" name="filename" accept="video/mp4, video/mov, video/wmv, video/flv, video/avi" required>
+                  </form>
+            
+            <div class="button"><a href= "profil.html" ><button type="submit">Postavi pesmu</button></a></div>
+        </div>
+        
+    </form>
+    
+</body>
+</html>

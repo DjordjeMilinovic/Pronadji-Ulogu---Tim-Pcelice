@@ -1,0 +1,76 @@
+/*Đorđe Milinović*/
+#List{
+    position: absolute;
+    top:5%;
+    left:14%;
+    height: 90%;
+    width: 72%;
+    margin: auto;
+    overflow: auto;
+    color: #606770;
+    overflow: auto;
+}
+
+form{
+    position: fixed;
+    top:3%;
+    left:70%;
+    
+}
+form input{
+    border-radius: 4px;
+    font-size: 1.5em;
+    font-weight: bolder;
+    color:whitesmoke;
+    background-color: darkcyan;
+    align-content: center;
+    font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+}
+
+.candidate{
+    position: relative;
+    top:5%;
+    left:2%;
+    width: 95%;
+    height: 10%;
+    margin-bottom: 1%;
+}
+.candidate a{
+    text-decoration: none;
+}
+.candidate a:visited{
+    color: darkcyan;
+}
+.candidate a:hover{
+    color: rgb(85, 235, 185);
+
+}
+
+
+.candidate img{
+    position: relative;
+    height: 100%;
+    float: left;
+}
+.candidate table{
+    font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+.candidate form{
+    font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+    color: #606770;
+    position: relative;
+    top:-40%;
+    left:55%;
+    display: inline;
+}
+.candidate input{
+    border-radius: 4px;
+    font-size: 1.5em;
+    font-weight: bolder;
+    color:whitesmoke;
+    background-color: darkcyan;
+    align-content: center;
+    font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+}

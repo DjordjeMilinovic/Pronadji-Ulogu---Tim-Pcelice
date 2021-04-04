@@ -1,0 +1,82 @@
+/*Autor: Jelena Pančevski*/
+.button {
+    text-align: right;
+    padding-left:-50%;
+    padding-right: 16.5%;
+    padding-top:-8px ;
+ }
+ .button button{
+     width: 180px;
+     height:35px;
+     border-radius: 4px;
+     font-weight: bolder;
+     color:whitesmoke;
+     background-color: darkcyan;
+     align-content: center;
+     
+ }
+
+.Title{
+    text-align:center;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-left: 45%;
+    margin-bottom: 5px;
+    color: #606770;
+    display: inline;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.image{
+    color: whitesmoke;
+            font-weight:bolder;
+            width: 200px;
+            height:200px;
+}
+.TitleTheme{
+    color: #606770;
+    font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: left;
+    margin-right: 20%;
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-top: 2px;
+    padding-left: 0px;
+
+}
+.ShortCaption{
+    color: #606770;
+    font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: left;
+    margin-right: 20%;
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-top: 2px;
+    padding-left: 0px;
+
+}
+.Text {
+    color: #606770;
+    font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: left;
+    margin-right: 20%;
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-top: 2px;
+    padding-left: 0px;
+
+}
+.Themes {
+padding-left: 20%;
+}

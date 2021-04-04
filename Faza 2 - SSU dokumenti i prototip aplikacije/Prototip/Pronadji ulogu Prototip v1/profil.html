@@ -1,0 +1,58 @@
+<!--Đorđe Milinović-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="profil.css">
+</head>
+<body>
+    <div class="Header">
+        <ul>
+            <li class="SiteName">Pronađi ulogu</li>
+            <li class="SiteMenus">
+                <div class="Casting">Kastinzi 
+                <div class="DropdownCasting">
+                <a href="#"onclick="loadcastings()">Televizija</a>
+                <a href="#"onclick="loadcastings()">Pozorište</a>
+                <a href="#"onclick="loadcastings()">Svi kastinzi</a>
+                </li>
+            <li class="SiteMenus"><a class="SiteMenus" href="#"onclick="loadforum()">Forum </a></li>
+            <li class="SiteMenus"> <a class="SiteMenus" href="#"onclick="loadprofile()">Profil</a></li>
+            <li class="SiteMenus"><a class="SiteMenus" href="#"onclick="loadentries()">Prijave</a></li> <!--Moji Kastinzi-->
+            <li class="SiteMenus"><a class="SiteMenus" href="#" onclick="loadsongs()">Pesme</a></li>
+            <li class="SiteMenus"><a class="SiteMenus" href="#"onclick="loadmonologs()">Monolozi</a></li>
+            <li class="UserPassword"><!--<div id="profile">--><img id="profileimage" src="aleksavisnjic.jpg"> AleksaVisnjic </li>
+            <li class="UserPassword"><a href= "projekat.html" target="blank " ><input  type="button" name="Logout" value="Logout"></a></li>
+            
+          </ul>
+    </div>
+<div id="content" class="SelectedOption">
+</div>
+<script>
+function loadsongs(file) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="pesme.html" ></object>';
+}
+function loadforum(file) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="forum.html" ></object>';
+}
+function loadprofile(file) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="izmenaprofila.html" ></object>';
+}
+function loadmonologs(file) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="monolozi.html" ></object>';
+}
+function loadentries(file) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="prijave.html" ></object>';
+}
+function loadcastings(file) {
+    document.getElementById("content").innerHTML='<object type="text/html" data="pregledKastinga.html" ></object>';
+}
+</script>
+
+    
+</body>
+</html>
