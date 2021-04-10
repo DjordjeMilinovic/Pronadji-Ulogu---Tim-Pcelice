@@ -9,18 +9,18 @@
     <title>Document</title>
 </head>
 <body class="Body">
-    <h1>Registracija</h1>
-    <form>
+    <form action="document.location.reload(true)" onsubmit="alert('Uspesna registracija')">
+        <h1>Registracija</h1>
         <div >
-            <input type="textbox" class="TextBoxes" placeholder="Ime" required/>
+            <input id="name" type="textbox" class="TextBoxes" placeholder="Ime" required/>
             <br>
-            <input type="textbox" class="TextBoxes" placeholder="Prezime" required/>
+            <input id="surname" type="textbox" class="TextBoxes" placeholder="Prezime" required/>
             <br>
-            <input type="email" class="TextBoxes" placeholder="E-mail" required/>
+            <input id ="email" type="email" class="TextBoxes" placeholder="E-mail" required/>
             <br>
-            <input type="textbox" class="TextBoxes" placeholder="Korisničko ime" required/>
+            <input id= "username" type="textbox" class="TextBoxes" placeholder="Korisničko ime" required/>
             <br>
-            <input type="password" class="TextBoxes" placeholder="Lozinka" required>
+            <input id ="password" type="password" class="TextBoxes" placeholder="Lozinka" required>
             <br>
         <div><p class="DateOfBirth">Datum rođenja</p>
                 <span >
@@ -42,9 +42,11 @@
                <label>Reditelj</label>
                     <input type="radio" name="TipKorisnika" required></span>
             </span>
-        </div>
-        <div class="button"><a href= "profil.html" target="blank " ><button type="submit">Registrujte se</button></a></div>
+        
+        <div class="button"><button type="submit" >Registrujte se</button></div>
+    </div>
     </form>
+    <div id="notification"></div>
     
 </body>
 </html>

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="tema.css">
+    <script src="script.js"></script>
 </head>
 <body>
     
@@ -30,7 +31,7 @@
         </tr>
     </table>
     
-<ul>
+<ul id="list">
     <li>
         <table>
             <tr>
@@ -70,11 +71,11 @@
     <tr>
         <td>
             <div >
-                <textarea  name="NewComent" placeholder="Comment" rows="3" cols="100" style="resize: none;"></textarea>
+                <textarea id="NewComment" name="NewComent" placeholder="Comment" rows="3" cols="100" style="resize: none;"></textarea>
             </div>
         </td>
         <td>
-            <div class="button"><a href= "tema.html" target="blank " ><button type="submit">Postavi komentar</button></a></div>
+            <div class="button"><button type="submit" onclick="postcomment()">Postavi komentar</button></div>
         </td>
     </tr> 
 </table>

@@ -7,15 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dodajkasting.css">
     <title>Document</title>
+    <script src="script.js"></script>
 </head>
 <body class="Body">
-    <form>
+    <form action="kreiranikastinzi.html">
     <h1>Kasting</h1>
     <div>
-        <input type="textbox" class="TextBoxes" placeholder="Naziv kastinga" required/>
-        <label id="Category" >Kategorija:</label>
+        <input id="NazivKastinga" type="textbox" class="TextBoxes" placeholder="Naziv kastinga" required/>
+        <label id="Kategorija" >Kategorija:</label>
             <span>
-                <select name="KategorijaKastinga" class="CastingType" required>
+                <select name="KategorijaKastinga" class="SongType" required>
                     <option value="Film">
                     Film
                     </option>
@@ -33,7 +34,7 @@
            </td>
            <td>
                <div>
-                   <div class="Coordinates"> Profile picture
+                   <div class="Koordinate"> Profile picture
                    <form action="/action_page.php">
                        <input type="file" id="myFile" name="filename" accept="image/gif, image/jpeg, image/png">
                      </form>
@@ -53,8 +54,7 @@
                </td>
            
             </table>
-                       
-               <div class="button"><a href= "profil.html" target="blank " ><button type="submit">Postavi kasting</button></a></div>
+               <div class="button"><button type="submit" onclick="alertcreatedcasting()">Postavi kasting</button></div>
         </div>
         </form>
 

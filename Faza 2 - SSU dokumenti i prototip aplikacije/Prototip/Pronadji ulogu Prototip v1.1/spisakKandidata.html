@@ -7,13 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="spisakKandidata.css">
+    <script src="script.js"></script>
 </head>
 <body>
 
-    <form action=""><input type="button" value="Kreiraj uzivo audiciju"></form>
+    <form action="">
+        <input type="button" value="Kreiraj uzivo audiciju">
+        <input type="button" value="Završi audiciju">
+    </form>
     <div id="List">
        
-        <div class = "candidate">
+        <div id="candidate1" class = "candidate">
             <img src="aleksavisnjic.jpg" alt="">
             <table>
                 <tr>
@@ -24,12 +28,12 @@
                 </tr>
             </table>
             <form action="profilPrijava.html"><input type="submit" value="Prijava"></form>
-            <form action=""><input type="submit" value="Prihvati"></form>
-            <form action=""><input type="submit" value="Odbij"></form>
+            <form action=""><input type="submit" value="Prihvati" onclick="remove('candidate1')"></form>
+            <form action=""><input type="submit" value="Odbij"onclick="remove('candidate1')"></form>
             <form action=""><input type="checkbox" name="c1" id="c1" >Odaberi</form>
 
         </div>
-        <div class = "candidate">
+        <div id="candidate2" class = "candidate">
             <img src="aleksavisnjic.jpg" alt="">
             <table>
                 <tr>
@@ -40,11 +44,11 @@
                 </tr>
             </table>
             <form action="profilPrijava.html"><input type="submit" value="Prijava"></form>
-            <form action=""><input type="submit" value="Prihvati"></form>
-            <form action=""><input type="submit" value="Odbij"></form>
+            <form action=""><input type="submit" value="Prihvati" onclick="remove('candidate2')"></form>
+            <form action=""><input type="submit" value="Odbij" onclick="remove('candidate2')"></form>
             <form action=""><input type="checkbox" name="c1" id="c1" >Odaberi</form>
         </div>
-        <div class = "candidate">
+        <div  id="candidate3" class = "candidate">
             <img src="aleksavisnjic.jpg" alt="">
             <table>
                 <tr>
@@ -55,11 +59,13 @@
                 </tr>
             </table>
             <form action="profilPrijava.html"><input type="submit" value="Prijava"></form>
-            <form action=""><input type="submit" value="Prihvati"></form>
-            <form action=""><input type="submit" value="Odbij"></form>
+            <form action=""><input type="submit" value="Prihvati" onclick="remove('candidate3')"></form>
+            <form action=""><input type="submit" value="Odbij" onclick="remove('candidate3')"></form>
             <form action=""><input type="checkbox" name="c1" id="c1" >Odaberi</form>
         </div>
     </div>
+
+    
 
     
 </body>

@@ -9,13 +9,14 @@
     <title>Document</title>
 </head>
 <body class="Body">
-    <h1 class="Title">Prijava na kasting</h1>
-    <div >
-        <input type="textbox" class="TextBoxes" placeholder="Ime" maxlength="20"/>
+    <form action="pregledKastinga.html">
+      <h1 class="Title">Prijava na kasting</h1>
+      <div>
+        <input type="textbox" class="TextBoxes" placeholder="Ime" maxlength="20" required/>
         <br>
-        <input type="textbox" class="TextBoxes" placeholder="Prezime"  maxlength="20"/>
+        <input type="textbox" class="TextBoxes" placeholder="Prezime"  maxlength="20" required/>
         <br>
-        <input type="textbox" class="TextBoxes" placeholder="E-mail"  maxlength="20"/>
+        <input type="textbox" class="TextBoxes" placeholder="E-mail"  maxlength="20" required/>
         <br>
     
         <form action="/action_page.php">
@@ -26,8 +27,11 @@
             <label class="Text">Postavi sliku</label> <br>
             <input type="file" id="Picture" name="filename" accept="image/gif, image/jpeg, image/png">
           </form>
-
-    </div>
-    <div class="button"><a href= "profil.html" target="blank " ><button type="submit">Prijavite se</button></a></div>
+      
+      
+        <div class="button"><button type="submit">Prijavite se</button></div>
+      </div>
+    </form>   
+    
 </body>
 </html>
