@@ -1,0 +1,44 @@
+<!--Đorđe Milinović-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/pregledKastinga.css">
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<br>
+<br>
+<br>
+
+
+
+     <div id="Filter" >
+        <p id="typeText">Vrsta uloge:</p>
+        <!--<form method="POST" action='<?php base_url("$controller/FiltriranjeKastinga")?>'>-->
+            <input type="Text" hidden id="Tip" value="<?php echo $Tip?>">
+             <input type="Text" hidden id="Controller" value="<?php echo $controller?>">
+            <select name="ActorType" class="ActorFilter" id="actorType" onchange="filterPrikaz()">
+            <option value="Sve">Sve</option>
+            <option value="Glumac">Glumac</option>
+            <option value="Statista">Statista</option>
+        </select>
+        </form>
+    </div>
+
+   <!-- <div id="List" class="example">-->
+   <div id="Kastinzi">
+          <?php 
+     echo $string; 
+     ?>
+   </div>
+
+   
+<!--ostaju-->
+  <!--  </div>-->
+    
+    
+</body>
+</html>

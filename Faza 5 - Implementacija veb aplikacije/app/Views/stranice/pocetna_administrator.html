@@ -1,0 +1,35 @@
+<!--Autor: Jelena Pančevski-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/administrator.css">
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+     <script src="/assets/js/script.js"></script>
+   
+</head>
+<body>
+    <header class="Header">
+        <ul>
+            <li class="SiteName">Pronađi ulogu</li>
+            <li class="SiteMenus">
+                <div class="Casting">Kastinzi 
+                <div class="DropdownCasting">
+                    <a href="<?php echo base_url('Administrator/prikaziKastingeTelevizija')?>">Televizija</a>
+                    <a href="<?php echo base_url('Administrator/prikaziKastingePozoriste')?>">Pozorište</a>
+                    <a href="<?php echo base_url('Administrator/prikaziSveKastinge')?>">Svi kastinzi</a>
+                </li>
+            <li class="SiteMenus"><a class="SiteMenus" href="<?php echo base_url('Administrator/prikaziTeme')?>">Forum </a></li>
+            <li class="SiteMenus"> <a class="SiteMenus" href="<?php echo base_url('Administrator/profil')?>">Profil</a></li>
+            <li class="SiteMenus"><a class="SiteMenus" href="<?php echo base_url('Administrator/ZahteviZaKasting')?>">Zahtevi za kasting</a></li>
+            <li class="SiteMenus"><a class="SiteMenus" href="<?php echo base_url('Administrator/ZahteviZaReditelja')?>">Zahtevi za reditelja</a></li>
+            <li class="UserPassword"><img id="profileimage" src="<?php echo'/files/images/'.$Korisnik->KorisnickoIme.'.jpg'?>" onerror="this.src='/files/images/alt/alt.png';"> <?php echo $Korisnik->KorisnickoIme ?> </li>
+            <li class="UserPassword"><a href= "<?php echo base_url('Administrator/logout')?>"  ><input  type="button" name="Logout" value="Logout"></a></li>
+          </ul>
+    </header>
+<div id="content" class="SelectedOption">
+
+   

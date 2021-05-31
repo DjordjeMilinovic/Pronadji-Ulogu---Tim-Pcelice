@@ -1,0 +1,39 @@
+<!--Đorđe Milinović-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/profil.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+     <script src="/assets/js/script.js"></script>
+    
+</head>
+<body>
+    <div class="Header">
+        <ul>
+            <li class="SiteName">Pronađi ulogu</li>
+            <li class="SiteMenus">
+                <div class="Casting">Kastinzi 
+                <div class="DropdownCasting">
+                <a href="<?php echo base_url('RegistrovaniKorisnik/prikaziKastingeTelevizija')?>">Televizija</a>
+                <a href="<?php echo base_url('RegistrovaniKorisnik/prikaziKastingePozoriste')?>">Pozorište</a>
+                <a href="<?php echo base_url('RegistrovaniKorisnik/prikaziSveKastinge')?>">Svi kastinzi</a>
+                </li>
+            <li class="SiteMenus"><a class="SiteMenus" href="<?php echo base_url('RegistrovaniKorisnik/prikaziTeme')?>">Forum </a></li>
+            <li class="SiteMenus"> <a class="SiteMenus" href="<?php echo base_url('RegistrovaniKorisnik/profil')?>" onclick="loadprofile()">Profil</a></li>
+            <li class="SiteMenus"><a class="SiteMenus" href="#"onclick="loadentries()">Prijave</a></li> <!--Moji Kastinzi-->
+            <li class="SiteMenus"><a class="SiteMenus" href="<?php echo base_url('RegistrovaniKorisnik/pesme')?>" onclick="loadsongs()">Pesme</a></li>
+            <li class="SiteMenus"><a class="SiteMenus" href="<?php echo base_url('RegistrovaniKorisnik/monolozi')?>"onclick="loadmonologs()">Monolozi</a></li>
+            <li class="UserPassword"><!--<div id="profile">--><img id="profileimage" src="<?php echo'/files/images/'.$Korisnik->KorisnickoIme.'.jpg'?>" onerror="this.src='/files/images/alt/alt.png';"> <?php  echo $Korisnik->KorisnickoIme." "; ?> </li>
+            <li class="UserPassword"><a href= "<?php echo base_url('RegistrovaniKorisnik/logout')?>" ><input  type="button" name="Logout" value="Logout"></a></li>
+            
+          </ul>
+    </div>
+<div id="content" class="SelectedOption">
+
+
+

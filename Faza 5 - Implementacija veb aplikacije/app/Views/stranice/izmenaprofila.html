@@ -1,0 +1,39 @@
+<!--Đorđe Milinović-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/izmenaprofila.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+    <div class="mainView">
+        <form method="post">
+        <img class="imgprof" src="<?php echo'/files/images/'.$Korisnik->KorisnickoIme.'.jpg'?>" onerror="this.src='/files/images/alt/alt.png';">
+        <table class="tableprof">
+            
+            <tr>
+                
+                <td class="tdprof"> <label class="labelprof">Username</label><input class="inputprof" type="text" size="30" value="<?php echo $Korisnik->KorisnickoIme ?>" style="color: #424344;;" readonly></td>
+            </tr>
+            <tr>
+                <td class="tdprof"><label class="labelprof">Name</label><input  class="inputprof" type="text" size="30" name="Ime" id="Ime" placeholder="<?php echo $Korisnik->Ime ?>"></td>
+            </tr>
+            <tr>
+                <td class="tdprof"><label class="labelprof">Surname</label><input  class="inputprof" type="text" size="30" name="Prezime" id="Prezime" placeholder="<?php echo $Korisnik->Prezime ?>"></td>
+            </tr>
+            <tr>
+                <td class="tdprof"><label class="labelprof">E-mail</label><input class="inputprof" type="text" size="30" value="<?php echo $Korisnik->Email ?>" style="color: #424344;" readonly></td>
+            </tr>
+           
+        </table>
+            <button type="button" class="inputprof" id="buttonSave" name="Sacuvaj izmene" onclick="EditProfile()"> Sacuvaj izmene </button>
+    </form>
+    </div>
+
+</body>
+</html>
+
+

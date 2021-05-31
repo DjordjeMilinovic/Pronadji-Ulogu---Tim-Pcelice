@@ -1,0 +1,52 @@
+<!--Autor: Jelena Pančevski-->
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/dodajcontent.css">
+    <link rel="stylesheet" href="/assets/css/popup.css">
+    <script src='/assets/js/script.js'> </script>
+    <title>Document</title>
+</head>
+<div class="Body">
+   
+    
+    <h1>Pesma</h1>
+    <form action="<?php echo site_url('RegistrovaniKorisnik/novapesma')?>" enctype="multipart/form-data" method="post">
+        <div>
+                <div >
+                    <input type="textbox" class="TextBoxes" placeholder="Naziv pesme" name="Naziv pesme" required />
+                    <br>
+                    <input type="textbox" class="TextBoxes" placeholder="Ime autora" name="Ime autora" />
+                    <br>
+                    <INPUT TYPE="hidden" NAME="MAX_FILE_SIZE" VALUE="6000000">
+                    <input type="textbox" class="TextBoxes" placeholder="Prezime autora" name="Prezime autora"/>
+                    <br>
+                <div><p class="TypeOfContent">Vrsta pesme</p>
+                        <span class="VP">
+                            <select name="TipPesme" class="SongType" required>
+                                <option value="Epika">Epska</option><option value="Lirika">Lirska</option>
+                            </select>
+                            
+                        </span>
+                    </div>
+                    
+                </div>
+                <!--<form action="/action_page.php">-->
+                <div class="popup" onclick="closepopup()"><span class="popuptext" id="myPopup" ></span>
+                  </div>
+                <?php 
+                 if (isset($poruka)) echo "<script> error('".$poruka."');</script>";
+                 ?>
+                    <input type="file" id="myFile" name="Pesma" accept="video/mp4" required>
+                <!-- , video/mov, video/wmv, video/flv, video/avi-->
+            
+            <div class="button"><button type="submit">Postavi pesmu</button></div>
+        </div>
+        
+    </form>
+    
+</div>
+</body>
+</html>

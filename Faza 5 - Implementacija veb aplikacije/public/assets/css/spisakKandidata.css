@@ -1,0 +1,49 @@
+/*Đorđe Milinović*/
+#List{
+    position: absolute;
+    top:5%;
+    left:14%;
+    height: 90%;
+    width: 72%;
+    margin: auto;
+    overflow: auto;
+    color: #606770;
+    overflow: auto;
+}
+
+.tableclass{
+    width:70%;
+    text-align: center;
+    margin:auto;
+    
+}
+form input{
+    border-radius: 4px;
+    font-size: 1.5em;
+    font-weight: bolder;
+    color:whitesmoke;
+    background-color: darkcyan;
+    align-content: center;
+    font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+    
+}
+
+
+.img{
+    width:120px;
+    height:120px;
+}
+.Name{
+    font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.t1{
+    margin: 0px;
+}
+
+.floating{
+     float:left;
+     margin: auto;
+}

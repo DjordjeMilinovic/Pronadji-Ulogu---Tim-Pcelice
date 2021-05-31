@@ -1,0 +1,66 @@
+/*Đorđe Milinović*/
+.maiView{
+    position: absolute;
+
+    top:5%;
+    left:14%;
+    height: 90%;
+    width: 72%;
+    margin: auto;
+}
+img{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    left:5%;
+    top:10%;
+    border: 2px solid rgb(42, 85, 165);
+}
+table{
+    position: relative;
+    left:40%;
+    top:-20%;
+    color: #606770;
+    font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 2em;
+    
+}
+tr, td{
+    border: 2px solid rgb(42, 85, 165);
+}
+
+.CVview{
+    position: relative;
+    
+    left:5%;
+    width: 90%;
+    height: 36%;
+    border: 2px solid rgb(42, 85, 165);
+    top:-9%;
+}
+
+input{
+    position: relative;
+    left:5.5%;
+
+    border-radius: 4px;
+    font-size: 2em;
+    font-weight: bolder;
+    color:whitesmoke;
+    background-color: darkcyan;
+    align-content: center;
+    font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+    top:12px;
+    margin-bottom: -30%;
+}
+a{
+    text-decoration: none;
+    color: darkcyan;
+}
+a:visited{
+    color: darkcyan;
+}
+a:hover{
+    color: rgb(85, 235, 185);
+}

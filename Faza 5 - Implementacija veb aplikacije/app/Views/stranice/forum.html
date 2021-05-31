@@ -1,0 +1,19 @@
+
+<!--Autor: Mihajlo Nikitovic-->
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/forum.css">
+    
+</head>
+<!--style="background-color:rgb(147, 217, 226)"-->
+    <h1 class="Title"> Forum </h1><br><br>
+    <div class="button"><a href= "<?php echo base_url($controller.'/prikaziDodavanjeNoveTeme')?>" target="blank " ><button type="submit">Dodaj temu</button></a></div>
+    <div class="Themes">
+       <?php 
+     echo $string; 
+     ?>

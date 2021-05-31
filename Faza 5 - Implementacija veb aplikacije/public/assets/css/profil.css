@@ -1,0 +1,98 @@
+/*Đorđe Milinović*/
+.SiteName{
+    display: inline;
+    font-size:44px;
+    color:whitesmoke;   
+}
+
+ul{
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+.SiteMenus{
+    display: inline;
+    color:whitesmoke!important;
+    font-weight:bolder;
+    padding: 1%;
+    font-size:25px;
+    text-decoration: none!important;
+}
+.UserPassword {
+    padding: 0px;
+    display:inline;
+    font-weight:bolder;
+    color:whitesmoke;
+   font-size: 20px;
+}
+.Header{
+    background-color:rgb(58, 58, 131);
+    width:90%;
+    position: absolute;
+   
+    left:5%;
+    top:0%;
+}
+.DropdownCasting{
+display: none;
+position: absolute;
+background-color: rgb(58, 58, 131);
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.DropdownCasting a {
+    color: whitesmoke !important;
+    padding: 12px 16px;
+    text-decoration: none !important;
+    display: block;
+    }
+    .Casting {
+        position: relative;
+        display: inline-block;
+        font-size:25px;
+        font-weight:bolder;
+        }
+ 
+ .DropdownCasting a:hover {background-color: rgb(66, 57, 57);}
+ .Casting:hover .DropdownCasting {display: block;}
+        #profileimage
+
+        {  
+            color: whitesmoke;
+            font-weight:bolder;
+            width:20px;
+            height:20px;
+        }
+        
+        #profile{
+            position:absolute;
+            top: 80px;
+            right:0;
+            width:200px;
+            height:100px;
+            border: 3px solid #73ad21;
+        }
+        .SelectedOption
+        {
+            height:100%;
+            width:100%;
+            position: absolute;
+            top:10%;
+            object-position: center;
+        
+        }
+        .SelectedOption  object{
+
+            height:100%;
+            width:100%;
+            
+        }
+        #content{
+            height:100%;
+            width:100%;
+        }
+        .video{
+            margin-left:25%;
+        }

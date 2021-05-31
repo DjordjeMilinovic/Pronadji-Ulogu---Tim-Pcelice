@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/dodajtemu.css">
+    <title>Document</title>
+</head>
+<div class="Body"><br><br><br><br>
+    <h1>Tema</h1>
+    <form action="<?= base_url($controller.'/dodajNovuTemu') ?>" method="post">
+       
+        <div>
+            <input type="textbox" class="Title" placeholder="Naslov teme" required name="naslov"/> 
+            <br>
+            <input type="textbox" class="ShortCaption" placeholder="Kratak opis teme" name="opis"/>
+            <br>
+            <textarea id="description" name="description" placeholder="Tekst" rows="27" cols="182"></textarea>
+        <div class="button"><button type="submit">Postavi temu</button></div>
+        </div>
+    </form>
+    </div>
+</body>
+</html>

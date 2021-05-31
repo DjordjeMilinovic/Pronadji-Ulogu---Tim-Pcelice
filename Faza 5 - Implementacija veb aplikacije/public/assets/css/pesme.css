@@ -1,0 +1,55 @@
+/*Autor: Jelena Pančevski*/
+ul{
+list-style-type: none;
+display: inline;
+margin:0;
+padding: 0;
+}
+
+.SongThumbnail{
+width:300px;
+height: 250px;
+border:3px solid black;
+border-radius: 4px;
+display: inline;
+
+}
+.Song{
+    display:inline;
+   padding-right:30px;
+}
+
+.class1 {
+    padding-top: 5%;
+    padding-left:10%;
+    padding-right:10%;
+    align-content: center;
+}
+
+
+#fig11{
+    align-self: center;
+    text-align: center;
+}
+
+.example::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .example {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+  }
+  #button{
+     width: 180px;
+     height:35px;
+     border-radius: 4px;
+     font-weight: bolder;
+     color:whitesmoke;
+     background-color: darkcyan;
+     align-content: center;
+  }
+  
+  #buttn{
+      text-align: right;
+  }

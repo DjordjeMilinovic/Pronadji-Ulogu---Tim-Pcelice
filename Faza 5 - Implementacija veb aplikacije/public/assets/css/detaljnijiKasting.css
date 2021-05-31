@@ -1,0 +1,105 @@
+/*Đorđe Milinović*/
+.body{
+    background-color: rgb(255, 230, 198);
+}
+#List{
+    position: absolute;
+    top:5%;
+    left:14%;
+    height: 90%;
+    width: 72%;
+    margin: auto;
+    /*border: 3px solid greenyellow;*/
+    overflow: auto;
+    color: #606770;
+    overflow: hidden;
+}
+
+.castingPicture{
+    position: relative;
+    float:normal;
+    left: 1%;
+    top:10%;
+    padding-top: 5px;
+    width: 350px;
+    height: 350px;
+}
+.castingPicture img{
+    width: 350px;
+    height: 350px;
+}
+
+.castingDetails{
+    position: relative;
+    left: 360px;
+    top:-32.8%;
+    padding-top: 5px;
+    width: 550px;
+    height: 150px;
+    padding-left: 1%;
+    /*border:5px solid palevioletred;*/
+    float: normal;
+}
+.castingDetails table {
+    color: #606770;
+    font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+    font-size: xx-large;
+    font-weight: 600;
+    position: relative;
+    width: 550px;
+    height: 150px;
+   
+}
+
+.type{
+    position: relative;
+    color: #606770;
+    font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+    font-size: x-large;
+    width: 350px;
+    height: 150px;
+    float: right;
+    right:8%;
+    top:-49%;
+   
+}
+.type table{
+    width: 300px;
+    height: 100%;
+
+}
+
+.description{
+    font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+    position: relative;
+    bottom: 22%;
+    width: 80%;
+    height: 40%;
+    left: 10%;
+
+    overflow-y: scroll;
+}
+.description::-webkit-scrollbar {
+    display: none;
+}
+.description {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.buttonClass{
+    position: absolute;
+    right: 21%;
+    top:50%;
+}
+
+.input{
+    font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 2em;
+    color:whitesmoke;
+    background-color: darkcyan;
+    align-content: center;
+    width: 150%;
+    height:auto;
+}

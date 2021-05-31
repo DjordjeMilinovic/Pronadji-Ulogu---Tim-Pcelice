@@ -1,0 +1,39 @@
+<!--Autor: Jelena Pančevski-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/profil.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+     <script src="/assets/js/script.js"></script>
+</head>
+<body style="margin-top: 0px;">
+    <div class="Header">
+        <ul>
+            <li class="SiteName">Pronađi ulogu</li>
+            <li class="SiteMenus">
+                <div class="Casting">Kastinzi 
+                <div class="DropdownCasting">
+                    <a href="<?php echo base_url('Reditelj/prikaziKastingeTelevizija')?>">Televizija</a>
+                    <a href="<?php echo base_url('Reditelj/prikaziKastingePozoriste')?>">Pozorište</a>
+                    <a href="<?php echo base_url('Reditelj/prikaziSveKastinge')?>">Svi kastinzi</a>
+            </div>
+        </div>
+        </li>
+        <li class="SiteMenus"><a class="SiteMenus" href="<?php echo base_url('Reditelj/prikaziTeme')?>">Forum </a></li>
+        <li class="SiteMenus"> <a class="SiteMenus" href="<?php echo base_url('Reditelj/profil')?>">Profil</a></li>
+        <li class="SiteMenus"><a class="SiteMenus" href="<?php echo base_url('Reditelj/dohvatiKreiraneKastinge')?>">Kreirani kastinzi</a></li>
+        <li class="SiteMenus"><a class="SiteMenus" href="<?php echo base_url('Reditelj/novKasting')?>" >Novi Kasting</a></li>
+            
+            <li class="UserPassword"><!--<div id="profile">--><img id="profileimage" src="<?php echo'/files/images/'.$Korisnik->KorisnickoIme.'.jpg'?>" onerror="this.src='/files/images/alt/alt.png';"> <?php echo $Korisnik->KorisnickoIme; ?> </li>
+            <li class="UserPassword"><a href= "<?php echo base_url('Reditelj/logout')?>" ><input  type="button" name="Logout" value="Logout" ></a></li>
+    </div>
+    <div id="content" class="SelectedOption">
+    
+
+    <?php
+    if (isset($string)) echo $string;
+    ?>

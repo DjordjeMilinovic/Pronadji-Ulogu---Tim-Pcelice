@@ -1,0 +1,63 @@
+<!--Autor: Jelena Pančevski-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/projekat.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.min.js"></script>
+    <script src='/assets/js/script.js'> </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      
+   
+</head>
+<body>  
+   
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <header class="Header">
+                    <ul>
+                        <li class="SiteName">Pronađi ulogu</li>
+                        <li class="SiteMenus">
+                            <div class="Casting">Kastinzi 
+                            <div class="DropdownCasting">
+                                <a href="<?php echo base_url('Gost/prikaziKastingeTelevizija')?>">Televizija</a>
+                                <a href="<?php echo base_url('Gost/prikaziKastingePozoriste')?>">Pozorište</a>
+                                <a href="<?php echo base_url('Gost/prikaziSveKastinge')?>">Svi kastinzi</a>
+                        </div>
+                    </div>
+                    </li>
+                    <li class="SiteMenus"><a class="SiteMenus" href="<?php echo base_url('Gost/prikaziTeme')?>">Forum </a></li>
+                   <li class="UserPassword"> 
+                    <form  class="UserPassword" name="loginform" action="<?= base_url('Gost/loginSubmit') ?>" method="post">
+                        <div class="UserPassword">Username: <input type ="text" id='KorisnickoIme' name ="KorisnickoIme" size="25" value="" required/></div>
+                        <div class="UserPassword">Password: <input type ="password" name ="Lozinka" id='Lozinka' value=""  size="25" required/></div>
+                        <div class="UserPassword"><button class="btn-light" type="submit" name="Login">Login</button></div>
+                        </form>
+                   </li>
+                    
+                    <!--<a href= "profil.html" target="blank " ><input type="submit" name="Login" value="Login"/></a>-->
+                        <!--<button type="submit" name="Register" value="Register" onclick="loadform()">-->
+                        <li class="UserPassword"> <button class="btn-light " type="submit" name="Register">Register</button></li>
+                      </ul>
+                    </header>
+                 
+            </div>
+        </div>
+    </div>
+   
+                            
+  
+    
+     <?php 
+    if (isset($poruka)) echo "<script> loginerror('".$poruka."','".$korisnickoime."')</script>";
+    ?>
+    <?php if (!empty($errors['KorisnickoIme']))  echo "<script> loginerror('".$errors['KorisnickoIme']."',null)</script>";?>
+    <?php if (!empty($errors['Lozinka']))  echo "<script> loginerror('".$errors['Lozinka']."',null)</script>";?>
+  
+</body>
+</html>
