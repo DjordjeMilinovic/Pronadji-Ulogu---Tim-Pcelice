@@ -158,7 +158,7 @@ class BaseController extends Controller {
  <form  class='button' method='post' action=\"" . $kastingdetaljnije . "\" >
                 <input type='text' hidden name='IdKastinga' value='" . $kasting->IdKasting . "'><button  type='submit'>Detaljnije</button></form>
 ";
-                if ($prijava < 2) {
+                if ($prijava ==1) {
                     //treba i
                     $string .= "<td><form action='' class = 'button' >
                            <button type = 'submit' onclick = 'removeAccept(" . $kasting->IdKasting . ")'name = 'prihvati" . $kasting->IdKasting . "'>Priavi se</button>
@@ -255,7 +255,7 @@ class BaseController extends Controller {
  <form  class='button' method='post' action=\"" . $kastingdetaljnije . "\" >
                 <input type='text' hidden name='IdKastinga' value='" . $kasting->IdKasting . "'><button  type='submit'>Detaljnije</button></form>
 ";
-                if ($prijava < 2) {
+                if ($prijava == 1) {
                     //treba i
                     $string .= "<td><form action='' class = 'button' >
                            <button type = 'submit' onclick = 'removeAccept(" . $kasting->IdKasting . ")'name = 'prihvati" . $kasting->IdKasting . "'>Priavi se</button>
