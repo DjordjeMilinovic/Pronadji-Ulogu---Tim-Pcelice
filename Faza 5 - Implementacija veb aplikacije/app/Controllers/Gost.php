@@ -55,13 +55,9 @@ class Gost extends BaseController {
             return redirect()->to(site_url('RegistrovaniKorisnik'));
         if ($result == null)
             return redirect()->to(site_url('Administrator'));
-        else{
-            if ($result->Status == 'Prihvacen')
-                return redirect()->to(site_url('Reditelj'));
-            else
-                 return $this->prikaz("pocetna_gost.html", ['poruka' => 'Zahtev za registraciju na cekanju', 'korisnickoime' => $this->request->getVar("KorisnickoIme")]);
-       }
-    }
+        else
+            return redirect()->to(site_url('Reditelj'));
+    }   
 /*
     Autor: Đorđe Milinović 0334/2018
     Omotač metoda koja poziva prikaz postojećih kastinga po kriterijumu:Televizija

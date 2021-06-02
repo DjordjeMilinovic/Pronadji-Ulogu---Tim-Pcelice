@@ -78,9 +78,6 @@ function loginerror(message, username) {
         break;
         case "The KorisnickoIme field is required." :document.getElementById('KorisnickoIme').placeholder = "Korisnicko ime je obavezno";
        break;
-       case 'Zahtev za registraciju na cekanju':
-            document.getElementById('KorisnickoIme').placeholder = message;
-        break;
     }
 }
 
