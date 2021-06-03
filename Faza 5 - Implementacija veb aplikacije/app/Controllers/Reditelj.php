@@ -85,7 +85,7 @@ class Reditelj extends Korisnik {
     @return void
     */
     public function prikaziKastingeTelevizija() {
-        $this->dohvatiKastingInfo(0, 2, 0);
+        $this->dohvatiKastingInfo(0, 2);
     }
     
 /*
@@ -94,7 +94,7 @@ class Reditelj extends Korisnik {
     @return void
     */
    public function prikaziKastingePozoriste() {
-        $this->dohvatiKastingInfo(1, 2, 0);
+        $this->dohvatiKastingInfo(1, 2);
     }
   /*
     Autor: Đorđe Milinović 0334/2018
@@ -102,7 +102,7 @@ class Reditelj extends Korisnik {
     @return void
     */
      public function prikaziSveKastinge() {
-        $this->dohvatiKastingInfo(2, 2, 0);
+        $this->dohvatiKastingInfo(2, 2);
     }
     
     /*

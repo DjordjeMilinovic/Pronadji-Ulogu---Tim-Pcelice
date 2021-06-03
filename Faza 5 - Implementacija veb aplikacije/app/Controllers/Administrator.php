@@ -204,7 +204,7 @@ class Administrator extends Korisnik {
     @return void
     */
     public function prikaziKastingeTelevizija() {
-        $this->dohvatiKastingInfo(0, 3, 0);
+        $this->dohvatiKastingInfo(0, 3);
     }
     
 /*
@@ -213,7 +213,7 @@ class Administrator extends Korisnik {
     @return void
     */
     public function prikaziKastingePozoriste() {
-        $this->dohvatiKastingInfo(1, 3, 0);
+        $this->dohvatiKastingInfo(1, 3);
     }
   /*
     Autor: Đorđe Milinović 0334/2018
@@ -221,7 +221,7 @@ class Administrator extends Korisnik {
     @return void
     */
      public function prikaziSveKastinge() {
-        $this->dohvatiKastingInfo(2, 3, 0);
+        $this->dohvatiKastingInfo(2, 3);
     }
     
       

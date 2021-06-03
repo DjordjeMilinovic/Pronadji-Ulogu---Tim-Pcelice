@@ -175,7 +175,7 @@ class BaseController extends Controller {
 
         return $string;
     }
-    public function dohvatiKastingInfo($tip, $prijava, $uloga) {
+    public function dohvatiKastingInfo($tip, $prijava) {
         $kor = $this->session->get("Korisnik");
         $controler;
         if ($kor != null) {
