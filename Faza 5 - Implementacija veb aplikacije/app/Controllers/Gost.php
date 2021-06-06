@@ -68,7 +68,7 @@ class Gost extends BaseController {
     @return void
     */
      public function prikaziKastingeTelevizija() {
-        $this->dohvatiKastingInfo(0, 0, 0);
+        $this->dohvatiKastingInfo(0, 0);
     }
     
 /*
@@ -77,7 +77,7 @@ class Gost extends BaseController {
     @return void
     */
     public function prikaziKastingePozoriste() {
-        $this->dohvatiKastingInfo(1, 0, 0);
+        $this->dohvatiKastingInfo(1, 0);
     }
   /*
     Autor: Đorđe Milinović 0334/2018
@@ -85,7 +85,7 @@ class Gost extends BaseController {
     @return void
     */
       public function prikaziSveKastinge() {
-        $this->dohvatiKastingInfo(2, 0, 0);
+        $this->dohvatiKastingInfo(2, 0);
     }
 public function prikaziDodavanjeNoveTeme() {
  echo '<script>alert("Morate se prvo ulogovati!!!")</script>';

@@ -268,7 +268,7 @@ class RegistrovaniKorisnik extends Korisnik {
      */
 
     public function prikaziKastingeTelevizija() {
-        $this->dohvatiKastingInfo(0, 1, 0);
+        $this->dohvatiKastingInfo(0, 1);
     }
 
     /*
@@ -278,7 +278,7 @@ class RegistrovaniKorisnik extends Korisnik {
      */
 
     public function prikaziKastingePozoriste() {
-        $this->dohvatiKastingInfo(1, 1, 0);
+        $this->dohvatiKastingInfo(1, 1);
     }
 
     /*
@@ -288,7 +288,7 @@ class RegistrovaniKorisnik extends Korisnik {
      */
 
     public function prikaziSveKastinge() {
-        $this->dohvatiKastingInfo(2, 1, 0);
+        $this->dohvatiKastingInfo(2, 1);
     }
     public function prikaziDodavanjeNoveTeme() {
 
