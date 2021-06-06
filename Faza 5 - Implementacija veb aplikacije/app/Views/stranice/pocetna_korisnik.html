@@ -25,14 +25,21 @@
                 </li>
             <li class="SiteMenus"><a class="SiteMenus" href="<?php echo base_url('RegistrovaniKorisnik/prikaziTeme')?>">Forum </a></li>
             <li class="SiteMenus"> <a class="SiteMenus" href="<?php echo base_url('RegistrovaniKorisnik/profil')?>" onclick="loadprofile()">Profil</a></li>
-            <li class="SiteMenus"><a class="SiteMenus" href="#"onclick="loadentries()">Prijave</a></li> <!--Moji Kastinzi-->
+            <li class="SiteMenus"><a class="SiteMenus" href="<?php echo base_url('RegistrovaniKorisnik/prijave_na_kasting')?>" onclick="loadentries()">Prijave</a></li> <!--Moji Kastinzi-->
             <li class="SiteMenus"><a class="SiteMenus" href="<?php echo base_url('RegistrovaniKorisnik/pesme')?>" onclick="loadsongs()">Pesme</a></li>
             <li class="SiteMenus"><a class="SiteMenus" href="<?php echo base_url('RegistrovaniKorisnik/monolozi')?>"onclick="loadmonologs()">Monolozi</a></li>
             <li class="UserPassword"><!--<div id="profile">--><img id="profileimage" src="<?php echo'/files/images/'.$Korisnik->KorisnickoIme.'.jpg'?>" onerror="this.src='/files/images/alt/alt.png';"> <?php  echo $Korisnik->KorisnickoIme." "; ?> </li>
             <li class="UserPassword"><a href= "<?php echo base_url('RegistrovaniKorisnik/logout')?>" ><input  type="button" name="Logout" value="Logout"></a></li>
-            
+    
           </ul>
     </div>
+    <br>
+    <br>
+     <h2 id="porukica"><?php if (isset($poruka)){
+            echo "$poruka";
+            }
+            
+            ?></h2>
 <div id="content" class="SelectedOption">
 
 

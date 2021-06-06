@@ -249,45 +249,6 @@ class Administrator extends Korisnik {
              $this->response->redirect(base_url('Administrator/prikaziTeme'));
        }
        
-       /*Mihajlo Nikitovic
-    fja za prikazivanje teme na forumu*/
      
-       public function prikaziTeme() {
-            
-            $temaModel=new \App\Models\TemaModel();
-            $teme=$temaModel->findAll();
-            $string="";
-            if($teme!=null){
-                foreach ($teme as $elem){
-                    
-                    $string.="<div>
-            <table>
-            <tr>
-                <td> <img class='image' src='/files/images/".$elem->KorisnickoIme.".jpg' onerror=\"this.src='/files/images/alt/alt.png';\"></td>
-                <td>
-                    <div class='TitleTheme'>".$elem->Naslov.  "</div>
-                    <div class='ShortCaption'>".$elem->KratakOpis."</div>
-                    <div class='Text'>Publisher:".$elem->KorisnickoIme."</div>
-                    <div class='Text'>Date:".$elem->Datum."
-                    </div>
-                </td>
-                <td>
-                    <div class='button'><a href= '#' target='blank' ><button type='submit'>Detaljnije</button></a></div>
-                </td>
-            </tr>
-            </table>
-        </div>";
-                    
-                }
-         $string.="</div>
-                </body>
-                </html>";
-                
-                
-            }   
-            $this->prikaz("pocetna_reditelj.html", []);
-                 echo view("stranice/forum.html", ["string" => $string]);  
-            
-        }
         
 }

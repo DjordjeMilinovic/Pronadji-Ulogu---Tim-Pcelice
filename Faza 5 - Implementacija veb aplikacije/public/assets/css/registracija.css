@@ -1,0 +1,69 @@
+/*Autor: Jelena Pančevski*/
+.Body{
+    display: inline-block;
+    margin: 20px;
+    position: relative;
+    text-align: left;
+}
+body{
+    padding-top:5%;
+    padding-left:40%;
+}
+h1{
+    padding-left:12px;
+}
+.TextBoxes
+{
+    border-radius: 4px;
+    color: #1c1e21;
+    font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    height: 36px;
+    line-height: 20px
+
+}
+.DateOfBirth {
+    color: #606770;
+    font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-top: 2px;
+}
+.Type {
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #0e101362;
+    box-sizing: border-box;
+    display: inline-block;
+    flex: 1 0 auto;
+    font-weight: normal;
+    height: 36px;
+    margin: 8px 8px 6px;
+    text-align: center;
+    padding-left:4px;
+    padding-top:3px;
+    width: auto;
+    font-size: 16px;
+    line-height: 20px
+}
+.button {
+   text-align: center;
+   padding-left:14px;
+   padding-right: 32px;
+}
+.button button{
+    width: 180px;
+    height:35px;
+    border-radius: 4px;
+    font-weight: bolder;
+    color:whitesmoke;
+    background-color: darkcyan;
+    align-content: center;
+}
+/*    background-color: transparent;
+    overflow: visible;
+    padding: 0;
+    width: 432px;*/

@@ -1,0 +1,38 @@
+/*Autor: Jelena Pančevski*/
+.Body{
+    display: inline-block;
+    margin: 20px;
+    position: relative;
+    text-align: left;
+}
+body{
+    padding-top:5%;
+    padding-left:40%;
+}
+.Title
+{   margin-bottom:10px;
+    color: #606770;
+}
+
+.Text {
+    color: #606770;
+    font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+    margin-right: 20%;
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-top: 2px;
+}
+
+.button button{
+    margin-top: 30px;
+    width: 180px;
+    height:35px;
+    border-radius: 4px;
+    font-weight: bolder;
+    color:whitesmoke;
+    background-color: darkcyan;
+    align-content: center;
+}

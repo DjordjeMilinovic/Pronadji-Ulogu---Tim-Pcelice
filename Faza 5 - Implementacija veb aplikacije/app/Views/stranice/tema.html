@@ -1,0 +1,36 @@
+<!--Autor: Jelena Pančevski-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/tema.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+    <div id="komentari">
+    <?php 
+    echo $string;
+    ?>
+    </div>
+<table id="NewComent">
+    
+    <tr>
+        <td>
+            <div >
+                <input type="hidden" id="controler" name="controler" value= "<?php echo $controller;?>">
+                <input type="hidden" id="idTeme" name="idTeme" value= "<?php echo $IdTeme;?>">
+                <textarea id="NewComment" name="NewComent" placeholder="Comment" rows="3" cols="100" style="resize: none;"></textarea>
+            </div>
+        </td>
+        <td>
+            <div class="button"><button onclick="dodajKomentar()">Postavi komentar</button></div>
+        </td>
+    </tr> 
+  
+</table>
+
+
+   <!--action="<?= base_url($controller.'/dodajNoviKomentar')?>"-->

@@ -1,0 +1,31 @@
+<!--Autor: Jelena Pančevski-->
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/prijavanakasting.css">
+    <title>Document</title>
+</head>
+
+    <form action="<?= base_url('RegistrovaniKorisnik/prijava_na_kasting')?>" method="POST" enctype="multipart/form-data">
+   
+      <h1 class="Title">Prijava na kasting</h1>
+      <br>
+      <br>
+      <div>
+        <?php 
+        if(isset($string))
+           echo $string;
+         ?>
+            <label class="Text" for="CV">Postavi cv u .pdf formatu:</label> <br> 
+            <input type="file" id="CV" name="cv" accept=".pdf"> <br><br> 
+            <label class="Text" for="Video">Postavi video u .mp4 formatu:</label> <br>
+            <input type="file" id="Video" name="video" accept=".mp4"><br>
+        <div class="button"><button type="submit">Prijavite se</button></div>
+      </div>
+    </form>   
+    
+</body>
+</html>

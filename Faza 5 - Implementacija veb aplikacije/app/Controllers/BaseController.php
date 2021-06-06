@@ -158,10 +158,10 @@ class BaseController extends Controller {
  <form  class='button' method='post' action=\"" . $kastingdetaljnije . "\" >
                 <input type='text' hidden name='IdKastinga' value='" . $kasting->IdKasting . "'><button  type='submit'>Detaljnije</button></form>
 ";
-                if ($prijava ==1) {
+                if ($prijava < 2) {
                     //treba i
                     $string .= "<td><form action='' class = 'button' >
-                           <button type = 'submit' onclick = 'removeAccept(" . $kasting->IdKasting . ")'name = 'prihvati" . $kasting->IdKasting . "'>Priavi se</button>
+                           <button type = 'submit' onclick = 'removeAccept(" . $kasting->IdKasting . ")'name = 'prihvati" . $kasting->IdKasting . "'>Prijavi se</button>
                         </form></td>";
                 }
 
@@ -215,7 +215,7 @@ class BaseController extends Controller {
             foreach ($kastinzi as $kasting) {
                 $korisnikModel = new \App\Models\KorisnikModel();
                 $reditelj = $korisnikModel->find($kasting->KorisnickoIme);
-
+                    $kastingprijava = base_url("RegistrovaniKorisnik/udji_na_kasting");
                 $string .= " 
                     <br>
                     <br>
@@ -255,10 +255,11 @@ class BaseController extends Controller {
  <form  class='button' method='post' action=\"" . $kastingdetaljnije . "\" >
                 <input type='text' hidden name='IdKastinga' value='" . $kasting->IdKasting . "'><button  type='submit'>Detaljnije</button></form>
 ";
-                if ($prijava == 1) {
+                if ($prijava < 2) {
                     //treba i
-                    $string .= "<td><form action='' class = 'button' >
-                           <button type = 'submit' onclick = 'removeAccept(" . $kasting->IdKasting . ")'name = 'prihvati" . $kasting->IdKasting . "'>Priavi se</button>
+                   $string .= "<td><form action=\"".$kastingprijava."\" method='POST' class = 'button'>
+                                <input type='hidden' name='kasting' value='".$kasting->IdKasting."'>
+                           <button type = 'submit' name = 'prihvati" . $kasting->IdKasting . "'>Prijavi se</button>
                         </form></td>";
                 }
 
@@ -376,5 +377,173 @@ class BaseController extends Controller {
 
         echo view("stranice/detaljnijiKasting.html", ["string" => $string]);
     }
+    
+    /*Mihajlo Nikitovic 0164/2018
+    Funkcija koja prikazuje sve teme na forumu*/
+
+ public function prikaziTeme() {
+             $kor = $this->session->get("Korisnik");
+        $controler;
+        if ($kor != null) {
+            $rediteljModel = new \App\Models\RediteljModel();
+            $korisnikModel = new \App\Models\RegistrovaniKorisnikModel();
+
+            if ($rediteljModel->find($kor->KorisnickoIme))
+                $controler = "Reditelj";
+            else if ($korisnikModel->find($kor->KorisnickoIme))
+                $controler = "RegistrovaniKorisnik";
+            else
+                $controler = "Administrator";
+        } else
+            $controler = "Gost";
+        $temaModel=new \App\Models\TemaModel();
+        $teme=$temaModel->findAll();
+        $string="";
+        $temadetaljnije = base_url("$controler/prikazJedneTeme");
+        if($teme!=null){
+            foreach ($teme as $elem){
+                    
+                $string.="<div>
+                        <table>
+            <tr>
+                <td> <img class='image' src='/files/images/".$elem->KorisnickoIme.".jpg' onerror=\"this.src='/files/images/alt/alt.png';\"></td>
+                <td>
+                    <div class='TitleTheme'>".$elem->Naslov.  "</div>
+                    <div class='ShortCaption'>".$elem->KratakOpis."</div>
+                    <div class='Text'>Publisher:".$elem->KorisnickoIme."</div>
+                    <div class='Text'>Date:".$elem->Datum."
+                    </div>
+                </td>
+                <td>
+                    <form action=\"".$temadetaljnije."\" method='POST'>
+                      <input type='hidden' id='hiddenId' name='controler' value=".$controler.">
+                     <input type='hidden' id='hiddenId' name='tema' value=".$elem->IdTema.">
+                    <div class='button'><button type='submit'>Detaljnije</button></div>
+                    </form>
+                </td>
+            </tr>
+            </table>
+        </div>";       
+                }
+         $string.="
+                </body>
+                </html>";
+                
+                 
+            }   
+        switch ($controler) {
+            case "Administrator": $this->prikaz("pocetna_administrator.html", []);
+                break;
+            case "RegistrovaniKorisnik": $this->prikaz("pocetna_korisnik.html", []);
+                break;
+            case "Reditelj": $this->prikaz("pocetna_reditelj.html", []);
+                break;
+            case "Gost": $this->prikaz("pocetna_gost.html", []);
+                break;
+        }
+           echo view("stranice/forum.html", ["string" => $string]); 
+        }
+        
+
+/*Aleksa Visnjic 0341/18 */
+/*Funkcija koja prikazuje jednu temu detaljno (temu i sve komentare na njoj)*/
+        public function prikazJedneTeme(){
+        $tema=$_POST['tema'];
+        $controler=$_POST['controler'];
+       $temaModel=new \App\Models\TemaModel();
+       $result=$temaModel->find($tema);
+       $komentarModel=new \App\Models\KomentarModel();
+       $komentari=$komentarModel->where('IdTema',$tema)->findAll();
+       $str="";
+       $vremeteme= date("F j, Y", strtotime($result->Datum));
+       $str.="<h1 class='Title'>".$result->Naslov."</h1><br>
+           <h3 class='Podnaslov'>".$result->KratakOpis."</h3><br>
+               
+        <table id=prvired>
+        <tr>
+            <td>
+                <div>
+                    <img class='Image' src='/files/images/".$result->KorisnickoIme.".jpg' onerror=\"this.src='/files/images/alt/alt.png';\" />
+                    <div class='User'>Publisher: ".$result->KorisnickoIme."</div>
+                    <div class='User'>Date: ".$vremeteme."</div>
+                </div>
+            </td>
+            <td class='Post'>
+              
+               <p class='Opis'>".$result->Tekst."</p><br>
+               
+            </td>
+        </tr>
+        </table>
+    <br>
+    <br>
+     <ul id='list'>";
+       foreach($komentari as $komentar){
+           $vreme= date("F j, Y", strtotime($komentar->Datum));
+            $str.="<li>
+                <table>
+                    <tr>
+                        <td>
+                            <img class='Image' src='/files/images/".$komentar->KorisnickoIme.".jpg'/ onerror=\"this.src='/files/images/alt/alt.png';\">
+                            <div class='User'>Publisher: ".$komentar->KorisnickoIme."</div>
+                            <div class='User'>Date: ".$vreme."</div>
+                        </td>
+                        <td  class='Comment'>
+                        <div>
+                           ".$komentar->Tekst." 
+                        </div>
+                        </td>
+                    </tr>
+                </table>
+              </li>";
+       }
+       $str."</ul>";
+         switch ($controler) {
+            case "Administrator": $this->prikaz("pocetna_administrator.html", []);
+                break;
+            case "RegistrovaniKorisnik": $this->prikaz("pocetna_korisnik.html", []);
+                break;
+            case "Reditelj": $this->prikaz("pocetna_reditelj.html", []);
+                break;
+            case "Gost": $this->prikaz("pocetna_gost.html", []);
+                break;
+        }
+       echo view("stranice/tema.html", ["string" => $str, "controller"=>$controler, "IdTeme"=>$tema]);
+   }
+   
+           /*Mihajlo Nikitovic*/
+/*Korisnik dodaje komentar na temu*/
+public function dodajNoviKomentar() {
+
+$komentarModel=new \App\Models\KomentarModel();
+echo '<script>alert("Uspesno ste dodali novi komentar")</script>';
+$datum=date("Y/m/d");
+$komentarModel->insert([
+'IdTema'=>$_POST['idTeme'],
+'KorisnickoIme'=>$this->session->get('Korisnik')->KorisnickoIme,
+'Tekst'=>$_POST['NewComment'],
+'Datum'=>date("Y/m/d")
+]);
+
+$IdTeme=$_POST['idTeme'];
+ $str="<li>
+                <table>
+                    <tr>
+                        <td>
+ 
+                        <img class='Image' src='/files/images/".$this->session->get('Korisnik')->KorisnickoIme.".jpg' onerror=\"this.src='/files/images/alt/alt.png';\"/>
+                            <div class='User'>Publisher: ".$this->session->get('Korisnik')->KorisnickoIme."</div>
+                            <div class='User'>Date: ".$datum."</div>
+                        </td>
+                        <td  class='Comment'>
+                        <div>
+                           ".$_POST['NewComment']." 
+                        </div>
+                        </td>
+                    </tr>
+                </table>
+              </li>";
+ print($str);
+}
 
 }

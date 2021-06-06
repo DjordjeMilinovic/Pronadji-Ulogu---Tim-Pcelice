@@ -76,8 +76,10 @@ class Reditelj extends Korisnik {
           }
      $KorisnickoIme= $_POST['KorisnickoIme'];
      $IdKasting= $_POST['IdKasting'];
+     if(file_exists('/files/videos/" . $KorisnickoIme."".$IdKasting.".mp4')){
      $string= " <video class='video'  src='/files/videos/" . $KorisnickoIme."".$IdKasting.".mp4' controls >  </video>  ";
-     $this->prikaz("pocetna_reditelj.html", ['string'=>$string]);
+     $this->prikaz("pocetna_reditelj.html", ['string'=>$string]);}
+     else $this->prikaz("pocetna_reditelj.html", ['string'=>"<div align='center'><b>Korisnik nije poslao video prijavu<b><div>"]);
     }
     /*
     Autor: Đorđe Milinović 0334/2018
@@ -85,7 +87,7 @@ class Reditelj extends Korisnik {
     @return void
     */
     public function prikaziKastingeTelevizija() {
-        $this->dohvatiKastingInfo(0, 2);
+        $this->dohvatiKastingInfo(0, 2, 0);
     }
     
 /*
@@ -94,7 +96,7 @@ class Reditelj extends Korisnik {
     @return void
     */
    public function prikaziKastingePozoriste() {
-        $this->dohvatiKastingInfo(1, 2);
+        $this->dohvatiKastingInfo(1, 2, 0);
     }
   /*
     Autor: Đorđe Milinović 0334/2018
@@ -102,7 +104,7 @@ class Reditelj extends Korisnik {
     @return void
     */
      public function prikaziSveKastinge() {
-        $this->dohvatiKastingInfo(2, 2);
+        $this->dohvatiKastingInfo(2, 2, 0);
     }
     
     /*
@@ -165,7 +167,7 @@ class Reditelj extends Korisnik {
             $sadrzajModel->delete($IdKasting);
         }
           
-          } 
+    } 
         
 
        $this->response->redirect(base_url('Reditelj/dohvatiKreiraneKastinge'));
@@ -180,7 +182,7 @@ class Reditelj extends Korisnik {
         $IdKasting = $_POST['IdKasting'];
         $prijavaModel = new \App\Models\PrijavaModel();
         $prijavaModel->odbijPrijavu($KorisnickoIme, $IdKasting);
-        $this->prikaziKreiraniKasting();
+          $this->prikaziKreiraniKasting();
     }
    
      /* Autor:Đorđe Milinović 0334/2018
@@ -200,44 +202,7 @@ class Reditelj extends Korisnik {
         echo view("stranice/spisakKandidata.html");
     }*/
 
-        /*Mihajlo Nikitovic*/
-   public function prikaziTeme() {
-            
-            $temaModel=new \App\Models\TemaModel();
-            $teme=$temaModel->findAll();
-            $string="";
-            if($teme!=null){
-                foreach ($teme as $elem){
-                    
-                    $string.="<div>
-            <table>
-            <tr>
-                <td> <img class='image' src='/files/images/".$elem->KorisnickoIme.".jpg' onerror=\"this.src='/files/images/alt/alt.png';\"></td>
-                <td>
-                    <div class='TitleTheme'>".$elem->Naslov.  "</div>
-                    <div class='ShortCaption'>".$elem->KratakOpis."</div>
-                    <div class='Text'>Publisher:".$elem->KorisnickoIme."</div>
-                    <div class='Text'>Date:".$elem->Datum."
-                    </div>
-                </td>
-                <td>
-                    <div class='button'><a href= '#' target='blank' ><button type='submit'>Detaljnije</button></a></div>
-                </td>
-            </tr>
-            </table>
-        </div>";
-                    
-                }
-         $string.="</div>
-                </body>
-                </html>";
-                
-                 
-            }   
-            
-          $this->prikaz("pocetna_reditelj.html", []);
-           echo view("stranice/forum.html", ["string" => $string]);  
-        }
+
          /*Mihajlo Nikitovic*/
         /*Korisnik dodaje temu na forumu*/
         public function dodajNovuTemu(){
@@ -316,7 +281,7 @@ class Reditelj extends Korisnik {
                     </div></td>
                      
                       <td><form  class='button' method='post' action=\"" . $kastingdetaljnije . "\" >
-                <button  type='submit'>Detaljnije</button></form></td>
+                <input type='text' hidden name='IdKastinga' value='" . $elem->IdKasting . "'><button  type='submit'>Detaljnije</button></form></td>
                       <td><form method = 'post' action = '" . $spisak . "' class='button'>"
                         . " <input type='text' hidden name='IdKasting' value='" . $elem->IdKasting . "'>"
                         . "<button type='submit' >Prijave za kasting</button>

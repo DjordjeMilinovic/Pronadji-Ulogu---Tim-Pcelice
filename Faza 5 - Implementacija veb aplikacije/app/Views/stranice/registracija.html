@@ -1,0 +1,58 @@
+<!--Autor: Aleksa Visnjic-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/registracija.css">
+    <title>Document</title>
+</head>
+<div class="Body">
+    <form action="<?= base_url('Gost/registracijaKorisnika')?>" method="POST" enctype="multipart/form-data">
+        <h1>Registracija</h1>
+        <div >
+            <input id="name" name="name" type="text" class="TextBoxes" placeholder="Ime" required/>
+            <br>
+            <input id="surname" name="surname" type="text" class="TextBoxes" placeholder="Prezime" required/>
+            <br>
+            <input id ="email" name="email" type="email" class="TextBoxes" placeholder="E-mail" required/>
+             <?php 
+                if (isset($poruka)&&($greska==1)){echo "$poruka";}
+            ?>
+            <br>
+            <input id= "username" name="username" type="text" class="TextBoxes" placeholder="Korisničko ime" required/>
+             <?php 
+                if (isset($poruka)&&($greska==0)){echo "$poruka";}
+            ?>
+            <br>
+            <input id ="password" name="password" type="password" class="TextBoxes" placeholder="Lozinka" required>
+            <?php 
+            if (!empty($errors['password']))  {echo "{$errors['password']}";}?>
+            <br>
+        <div><p class="DateOfBirth">Datum rođenja</p>
+                <span >
+                    <input type="date" id="birthday" name="birthday" max='2000-06-02' required>
+                </span>
+            </div>
+            <span data-type="radio">
+                <span class="Type" ><label>Korisnik</label>
+                <input type="radio" value="1" name="TipKorisnika" required></span>
+                <span class="Type">
+               <label>Reditelj</label>
+                    <input type="radio" value="2" name="TipKorisnika" required></span>
+            </span>
+            <br>
+            <h3>Odaberite profilnu sliku:</h3>
+            <input type="file" name="image" accept="image/jpeg"/>
+            <br>
+            <br>
+        <div class="button"><button type="submit" >Registrujte se</button></div>
+    </div>
+    </form>
+    <div id="notification">
+    </div>
+         <?php 
+                unset($poruka);
+            ?>
+</body>
+</html>

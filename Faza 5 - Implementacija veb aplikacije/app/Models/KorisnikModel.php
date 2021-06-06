@@ -12,6 +12,6 @@ class KorisnikModel extends Model
     protected $primaryKey = 'KorisnickoIme';
     protected $useAutoIncrement = true;
     protected $returnType     = 'object';
-    protected $allowedFields = ['Lozinka','DatumRodjenja','Ime','Prezime','Email'];
+    protected $allowedFields = ['KorisnickoIme','Lozinka','DatumRodjenja','Ime','Prezime','Email'];
   
 }

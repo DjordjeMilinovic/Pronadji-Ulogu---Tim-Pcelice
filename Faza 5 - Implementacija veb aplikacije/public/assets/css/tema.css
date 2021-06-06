@@ -1,0 +1,75 @@
+.Title{
+color: #606770;
+font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+font-size: 2em;
+padding-left: 22%;
+padding-bottom: 1%;
+line-height: 20px;
+margin-bottom: 0px;
+
+}
+.Image{
+    width:300px;
+    height:300px;
+    margin-right:20px;
+}
+.User{
+    color: #606770;
+    font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bolder;
+    text-align: left;
+    margin-right: 0%;
+    line-height: 20px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.Post{
+font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+top:7.2%;
+margin-right: 10%;
+text-align: justify;
+}
+body{
+    margin-left: 10%;
+    margin-right: 10%;
+   
+    background-color: rgb(199, 219, 255);
+}
+#prvired{
+    border-bottom: 4px double black;
+}
+li{
+ display: inline;
+}
+ul{
+    padding-left:0% ;
+}
+.Comment{
+width:100%;
+font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+vertical-align: middle;
+
+
+}
+#NewComent{
+    padding-left:24.7%
+    
+}
+.button {
+    text-align: right;
+    padding-right:0%;
+    padding-top: 0%;
+    padding-bottom: 2%;
+ }
+ .button button{
+     width: 160px;
+     height:35px;
+     border-radius: 4px;
+     font-weight: bolder;
+     color:whitesmoke;
+     background-color: darkcyan;
+     align-content: center;
+     
+     
+ }
