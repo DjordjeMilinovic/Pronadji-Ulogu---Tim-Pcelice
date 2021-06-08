@@ -37,35 +37,40 @@ class Gost extends BaseController {
      */
 
     public function loginSubmit() {
-        if (!$this->validate(['KorisnickoIme' => 'trim|required', 'Lozinka' => 'trim|required'])) {
-            return $this->prikaz('pocetna_gost.html', ['errors' => $this->validator->getErrors()]);
+        if (!$this -> validate(['KorisnickoIme' => 'trim|required', 'Lozinka' => 'trim|required'])) {
+            return $this -> prikaz('pocetna_gost.html', ['errors' => $this -> validator -> getErrors()]);
         }
         $korisnikModel = new KorisnikModel();
-        $korisnik = $korisnikModel->find($this->request->getVar("KorisnickoIme"));
+        $korisnik = $korisnikModel -> find($this -> request -> getVar("KorisnickoIme"));
         if ($korisnik == null) {
-            return $this->prikaz("pocetna_gost.html", ['poruka' => 'Korisnicko ime ne postoji', 'korisnickoime' => $this->request->getVar("KorisnickoIme")]);
+            return $this -> prikaz("pocetna_gost.html", ['poruka' => 'Korisnicko ime ne postoji', 'korisnickoime' => $this -> request -> getVar("KorisnickoIme")]);
         }
-        if ($korisnik->Lozinka != $this->request->getVar('Lozinka'))
-            return $this->prikaz("pocetna_gost.html", ['poruka' => 'Pogresna lozinka', 'korisnickoime' => $this->request->getVar("KorisnickoIme")]);
+        if ($korisnik -> Lozinka != $this -> request -> getVar('Lozinka'))
+            return $this -> prikaz("pocetna_gost.html", ['poruka' => 'Pogresna lozinka', 'korisnickoime' => $this -> request -> getVar("KorisnickoIme")]);
         $rediteljModel = new \App\Models\RediteljModel();
         $registrovanikorisnikModel = new \App\Models\RegistrovaniKorisnikModel();
-
-        $result = $registrovanikorisnikModel->find($korisnik->KorisnickoIme);
+    
+        $result = $registrovanikorisnikModel -> find($korisnik -> KorisnickoIme);
         if ($result == null)
-            $result = $rediteljModel->find($korisnik->KorisnickoIme);
+            $result = $rediteljModel -> find($korisnik -> KorisnickoIme);
         else {
-            $this->session->set('Korisnik', $korisnik);
-            return redirect()->to(site_url('RegistrovaniKorisnik'));
+            $this -> session -> set('Korisnik', $korisnik);
+            return redirect() -> to(site_url('RegistrovaniKorisnik'));
         }
         if ($result == null) {
-            $this->session->set('Korisnik', $korisnik);
-            return redirect()->to(site_url('Administrator'));
+            $this -> session -> set('Korisnik', $korisnik);
+            return redirect() -> to(site_url('Administrator'));
         } else {
-            if ($result->Status == 'Prihvacen') {
-                $this->session->set('Korisnik', $korisnik);
-                return redirect()->to(site_url('Reditelj'));
-            } else
-                return $this->prikaz("pocetna_gost.html", ['poruka' => 'Zahtev za registraciju na cekanju', 'korisnickoime' => $this->request->getVar("KorisnickoIme")]);
+            if ($result -> Status == 'Prihvacen') {
+                $this -> session -> set('Korisnik', $korisnik);
+                return redirect() -> to(site_url('Reditelj'));
+            } else {
+                switch ($result -> Status) {
+                    case "Na cekanju": return $this -> prikaz("pocetna_gost.html", ['poruka' => 'Zahtev za registraciju na cekanju', 'korisnickoime' => $this -> request -> getVar("KorisnickoIme")]);
+                    case "Odbijen": return $this -> prikaz("pocetna_gost.html", ['poruka' => 'Zahtev za registraciju odbijen', 'korisnickoime' => $this -> request -> getVar("KorisnickoIme")]);
+                }
+            }
+    
         }
     }
 

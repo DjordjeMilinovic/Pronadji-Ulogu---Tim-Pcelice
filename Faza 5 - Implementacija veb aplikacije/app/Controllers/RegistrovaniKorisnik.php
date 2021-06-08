@@ -187,7 +187,7 @@ class RegistrovaniKorisnik extends Korisnik {
             return $this->dodajmonolog(["poruka" => $poruka]);
         }
         $Delo = $this->request->getVar("Naziv_dela");
-        $Autor = $this->request->getVar("Ime_autora") . $this->request->getVar("Prezime_autora");
+        $Autor = $this->request->getVar("Ime_autora") ." ". $this->request->getVar("Prezime_autora");
         if ($Autor == "")
             $Autor = "Nepoznat";
         $Vrsta = $this->request->getVar("TipMonologa");
@@ -233,7 +233,7 @@ class RegistrovaniKorisnik extends Korisnik {
             return $this->dodajpesmu(["poruka" => $poruka]);
         }
         $Naziv = $this->request->getVar("Naziv_pesme");
-        $Autor = $this->request->getVar("Ime_autora") . $this->request->getVar("Prezime_autora");
+        $Autor = $this->request->getVar("Ime_autora") ." ". $this->request->getVar("Prezime_autora");
         if ($Autor == "")
             $Autor = "Nepoznat";
         $Vrsta = $this->request->getVar("TipPesme");

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jun 06, 2021 at 09:10 PM
+-- Generation Time: Jun 07, 2021 at 08:53 PM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `kasting` (
   `Status` varchar(20) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Na cekanju',
   PRIMARY KEY (`IdKasting`),
   KEY `KorisnickoIme` (`KorisnickoIme`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `kasting`
@@ -71,7 +71,8 @@ INSERT INTO `kasting` (`KorisnickoIme`, `IdKasting`, `Naziv`, `Opis`, `BrojGluma
 ('mixusmaxus', 18, 'Južni vetar 3', 'Južni vetar 3 je predstojeći srpski film iz 2025. godine. Predstavlja nastavak filma Južni Vetar iz 2021. i istoimene TV serije.', 0, 0, 'Film', 'Odbijen'),
 ('mixusmaxus', 19, 'Južni vetar 3', 'Južni vetar 3 je predstojeći srpski film iz 2025. godine. Predstavlja nastavak filma Južni Vetar iz 2021. i istoimene TV serije.', 30, 10, 'Film', 'Prihvacen'),
 ('mixusmaxus', 20, 'Kasting za film Titanik', 'Tema filma je romantična priča o bogatoj devojci i siromašnom momku koji se susreću i zaljubljuju na „nepotopivom brodu“, dok posada broda žuri da obori dotadašnji rekord u putovanju preko Atlantika.', 0, 40, 'Film', 'Prihvacen'),
-('mixusmaxus', 23, 'Evlis Presley- King of Rock', 'Film baziran na biografiji Evlis-a Presley-a.', 10, 26, 'Film', 'Na cekanju');
+('mixusmaxus', 23, 'Evlis Presley- King of Rock', 'Film baziran na biografiji Evlis-a Presley-a.', 10, 26, 'Film', 'Na cekanju'),
+('mixusmaxus', 24, 'Supermen', 'Novi Supermen sa novom pričom kao nikada do sad. Snimanje planirano da počne 2022. godine. ', 8, 32, 'Film', 'Na cekanju');
 
 -- --------------------------------------------------------
 
@@ -126,6 +127,7 @@ INSERT INTO `korisnik` (`KorisnickoIme`, `Lozinka`, `DatumRodjenja`, `Ime`, `Pre
 ('mixusmaxus', 'lozinka123', '1999-11-02', 'Mihajlo', 'Nikitović', 'nm180164d@student.etf.bg.ac.rs'),
 ('pance', 'lozinka123', '1999-05-26', 'Jelena', 'Pančevski', 'pj180123d@student.etf.bg.ac.rs'),
 ('petarp', 'lozinka123', '2000-02-04', 'Petar', 'Petrovic', 'petarp@gmail.com'),
+('viktorv', 'lozinka123', '1999-03-06', 'Viktor', 'Viktoric', 'viktorv@gmail.com'),
 ('visnja', 'lozinka123', '1999-04-21', 'Aleksa', 'Višnjić', 'va180341d@student.etf.bg.ac.rs');
 
 -- --------------------------------------------------------
@@ -163,7 +165,7 @@ CREATE TABLE IF NOT EXISTS `pesma` (
 --
 
 INSERT INTO `pesma` (`Naziv`, `Autor`, `IdSadrzaj`, `Vrsta`) VALUES
-('Cherry', 'LanaDel Rey', 69, 'Lirika'),
+('Cherry', 'Lana Del Rey', 69, 'Lirika'),
 ('New Song', 'Maneskin', 72, 'Epika');
 
 -- --------------------------------------------------------
@@ -208,6 +210,7 @@ CREATE TABLE IF NOT EXISTS `reditelj` (
 
 INSERT INTO `reditelj` (`KorisnickoIme`, `Status`) VALUES
 ('mixusmaxus', 'Prihvacen'),
+('viktorv', 'Na cekanju'),
 ('petarp', 'Na cekanju');
 
 -- --------------------------------------------------------

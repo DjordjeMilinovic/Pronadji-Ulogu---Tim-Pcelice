@@ -118,7 +118,7 @@ class BaseController extends Controller {
             foreach ($kastinzi as $kasting) {
                 $korisnikModel = new \App\Models\KorisnikModel();
                 $reditelj = $korisnikModel->find($kasting->KorisnickoIme);
-
+				$kastingprijava = base_url("RegistrovaniKorisnik/udji_na_kasting");
                 $string .= " 
                     <br>
                     <br>
@@ -158,10 +158,11 @@ class BaseController extends Controller {
  <form  class='button' method='post' action=\"" . $kastingdetaljnije . "\" >
                 <input type='text' hidden name='IdKastinga' value='" . $kasting->IdKasting . "'><button  type='submit'>Detaljnije</button></form>
 ";
-                if ($prijava < 2) {
+                if ($prijava == 1) {
                     //treba i
-                    $string .= "<td><form action='' class = 'button' >
-                           <button type = 'submit' onclick = 'removeAccept(" . $kasting->IdKasting . ")'name = 'prihvati" . $kasting->IdKasting . "'>Prijavi se</button>
+                    $string .= "<td><form action=\"".$kastingprijava."\" method='POST' class = 'button'>
+                                <input type='hidden' name='kasting' value='".$kasting->IdKasting."'>
+                           <button type = 'submit' name = 'prihvati" . $kasting->IdKasting . "'>Prijavi se</button>
                         </form></td>";
                 }
 
@@ -255,7 +256,7 @@ class BaseController extends Controller {
  <form  class='button' method='post' action=\"" . $kastingdetaljnije . "\" >
                 <input type='text' hidden name='IdKastinga' value='" . $kasting->IdKasting . "'><button  type='submit'>Detaljnije</button></form>
 ";
-                if ($prijava < 2) {
+                if ($prijava == 1) {
                     //treba i
                    $string .= "<td><form action=\"".$kastingprijava."\" method='POST' class = 'button'>
                                 <input type='hidden' name='kasting' value='".$kasting->IdKasting."'>
