@@ -46,7 +46,10 @@ class Reditelj extends Korisnik {
         $IdKasting= $_POST['IdKasting'];
         $korisnikModel= new \App\Models\KorisnikModel();
        $korisnik= $korisnikModel->find($KorisnickoIme);
-       $string="<img src='/files/images/".$KorisnickoIme.".jpg' onerror=\"this.src='/files/images/alt/alt.png';\">
+       $action = base_url("Reditelj/prikaziKreiraniKasting");
+       $string="<form action=".$action." method = 'post'><input type = 'submit' value ='Nazad na kasting' >"
+               . "<input type = 'text' name = 'IdKasting' hidden value=".$IdKasting." ></form><br>"
+               . "<img src='/files/images/".$KorisnickoIme.".jpg' onerror=\"this.src='/files/images/alt/alt.png';\">
 
         <table>
             <tr>
@@ -59,7 +62,7 @@ class Reditelj extends Korisnik {
                 <td>Email: ".$korisnik->Email."</td>
             </tr>
             <tr>
-                <td><a href='/files/cv/".$KorisnickoIme."".$IdKasting.".pdf' >Prikaži CV</a></td>
+                <td><a href='/files/cv/".$KorisnickoIme."".$IdKasting.".pdf' target='blank'>Prikaži CV</a></td>
             </tr>
         </table>";
        echo view("stranice/profilPrijava.html", ["string"=>$string]);
@@ -76,10 +79,16 @@ class Reditelj extends Korisnik {
           }
      $KorisnickoIme= $_POST['KorisnickoIme'];
      $IdKasting= $_POST['IdKasting'];
-     if(file_exists('/files/videos/" . $KorisnickoIme."".$IdKasting.".mp4')){
-     $string= " <video class='video'  src='/files/videos/" . $KorisnickoIme."".$IdKasting.".mp4' controls >  </video>  ";
+    $action = base_url("Reditelj/prikaziKreiraniKasting");
+     
+
+     if(file_exists("files/videos/" . $KorisnickoIme.$IdKasting.".mp4")){
+     $string="<form action=".$action." method = 'post'><input type = 'submit' value ='Nazad na kasting' >"
+               . "<input type = 'text' name = 'IdKasting' hidden value=".$IdKasting." ></form><br>".
+             " <video class='video'  src='/files/videos/" . $KorisnickoIme."".$IdKasting.".mp4' controls >  </video>  ";
      $this->prikaz("pocetna_reditelj.html", ['string'=>$string]);}
-     else $this->prikaz("pocetna_reditelj.html", ['string'=>"<div align='center'><b>Korisnik nije poslao video prijavu<b><div>"]);
+     else $this->prikaz("pocetna_reditelj.html", ['string'=>"<form action=".$action." method = 'post'><input type = 'submit' value ='Nazad na kasting' >"
+               . "<input type = 'text' name = 'IdKasting' hidden value=".$IdKasting." ></form><br>"."<div align='center'><b>Korisnik nije poslao video prijavu<b><div>"]);
     }
     /*
     Autor: Đorđe Milinović 0334/2018
@@ -345,9 +354,8 @@ class Reditelj extends Korisnik {
 
                 $korisnikModel = new \App\Models\KorisnikModel();
                 $korisnikInfo = $korisnikModel->find($prijava->KorisnickoIme);
-                if ($prijava->Status != 'Na cekanju')
-                    continue;
-                $string .= " 
+                if ($prijava->Status == 'Na cekanju'){
+					$string .= " 
                     <br>
                     <br><div id=  'candidate" . $brojac . "' >
              
@@ -385,7 +393,6 @@ class Reditelj extends Korisnik {
                         . "<input type='text' hidden name='KorisnickoIme' value='" . $korisnikInfo->KorisnickoIme . "'>"
                         . "<input type='submit' value='Odbij'></form>
 </td>
-<td><form action=''><input type='checkbox' name='c" . $brojac . "' id='c" . $brojac . "' >Odaberi</form></td>
                    </tr>
                    </table>
                    </td>
@@ -397,6 +404,8 @@ class Reditelj extends Korisnik {
         </div>
                     ";
                 $brojac++;
+				}
+                
             }
         }
 

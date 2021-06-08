@@ -23,14 +23,13 @@ class PrijavaModel extends Model {
       @return void */
     public function prihvatiPrijavu($KorisnickoIme, $IdKasting){
        
-      $this->update(['KorisnickoIme'=>$KorisnickoIme, 'IdKasting'=> $IdKasting], ['Status' => 'Prihvacen']);
+       $this->where('KorisnickoIme',$KorisnickoIme)->where('IdKasting', $IdKasting)->set(['Status'=> 'Prihvacen'])->update();
     }
     /* Autor:Đorđe Milinović 0334/2018
       Metoda koja odbija kandidatovu prijavu za odre�eni kasting.
       @return void */
      public function odbijPrijavu($KorisnickoIme, $IdKasting){
-       
-      $this->update(['KorisnickoIme'=>$KorisnickoIme, 'IdKasting'=> $IdKasting], ['Status' => 'Odbijen']);
+      $this->where('KorisnickoIme',$KorisnickoIme)->where('IdKasting', $IdKasting)->set(['Status'=> 'Odbijen'])->update();
     }
 }
 
