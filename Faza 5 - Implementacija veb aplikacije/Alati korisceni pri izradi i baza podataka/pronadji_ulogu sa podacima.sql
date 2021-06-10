@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jun 07, 2021 at 08:53 PM
+-- Generation Time: Jun 10, 2021 at 07:17 PM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -145,6 +145,13 @@ CREATE TABLE IF NOT EXISTS `monolog` (
   PRIMARY KEY (`IdSadrzaj`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Dumping data for table `monolog`
+--
+
+INSERT INTO `monolog` (`IdSadrzaj`, `Autor`, `Delo`, `Vrsta`) VALUES
+(73, 'Vilijem Sekspir', 'Hamlet', 'Dramski');
+
 -- --------------------------------------------------------
 
 --
@@ -210,8 +217,8 @@ CREATE TABLE IF NOT EXISTS `reditelj` (
 
 INSERT INTO `reditelj` (`KorisnickoIme`, `Status`) VALUES
 ('mixusmaxus', 'Prihvacen'),
-('viktorv', 'Na cekanju'),
-('petarp', 'Na cekanju');
+('petarp', 'Na cekanju'),
+('viktorv', 'Na cekanju');
 
 -- --------------------------------------------------------
 
@@ -245,7 +252,7 @@ CREATE TABLE IF NOT EXISTS `sadrzaj` (
   `KorisnickoIme` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`IdSadrzaj`),
   KEY `KorisnickoIme` (`KorisnickoIme`)
-) ENGINE=InnoDB AUTO_INCREMENT=73 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=74 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `sadrzaj`
@@ -253,7 +260,8 @@ CREATE TABLE IF NOT EXISTS `sadrzaj` (
 
 INSERT INTO `sadrzaj` (`IdSadrzaj`, `KorisnickoIme`) VALUES
 (69, 'pance'),
-(72, 'pance');
+(72, 'pance'),
+(73, 'visnja');
 
 -- --------------------------------------------------------
 
