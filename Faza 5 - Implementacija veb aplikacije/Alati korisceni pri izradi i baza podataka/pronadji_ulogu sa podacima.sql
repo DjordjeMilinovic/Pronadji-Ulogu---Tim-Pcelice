@@ -150,7 +150,7 @@ CREATE TABLE IF NOT EXISTS `monolog` (
 --
 
 INSERT INTO `monolog` (`IdSadrzaj`, `Autor`, `Delo`, `Vrsta`) VALUES
-(73, 'Vilijem Sekspir', 'Hamlet', 'Dramski');
+(73, 'Vilijem Sekspir', 'Hamlet', 'Drama');
 
 -- --------------------------------------------------------
 
