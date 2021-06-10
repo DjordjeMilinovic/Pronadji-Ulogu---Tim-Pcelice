@@ -1,0 +1,1310 @@
+{
+  "id": "f0bf4b1a-2aa1-4d05-882c-077e55b09c7b",
+  "version": "2.0",
+  "name": "PSI-faza 7",
+  "url": "http://localhost:8080/",
+  "tests": [{
+    "id": "7aa05c30-bb24-463a-9ad9-1711d397622b",
+    "name": "Test5 - Odabrana opcija kreirani kastinzi",
+    "commands": [{
+      "id": "a262ee22-1d80-484c-b955-a66d1cb3c93e",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/Reditelj",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1838633b-879b-4591-806f-bf5518390ea0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "926x693",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "870c95ef-a85e-42bb-b5be-44885950573b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Kreirani kastinzi",
+      "targets": [
+        ["linkText=Kreirani kastinzi", "linkText"],
+        ["css=.SiteMenus:nth-child(5) > .SiteMenus", "css:finder"],
+        ["xpath=//a[contains(text(),'Kreirani kastinzi')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Reditelj/dohvatiKreiraneKastinge']", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Kreirani kastinzi')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5acdb8d8-2d22-4d53-9381-a41450975c18",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Kreirani kastinzi",
+      "targets": [
+        ["linkText=Kreirani kastinzi", "linkText"],
+        ["css=.SiteMenus:nth-child(5) > .SiteMenus", "css:finder"],
+        ["xpath=//a[contains(text(),'Kreirani kastinzi')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Reditelj/dohvatiKreiraneKastinge']", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Kreirani kastinzi')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eb9e3ce9-1a88-4459-b32d-9395ec84a126",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.Title",
+      "targets": [],
+      "value": "Kreirani kastinzi"
+    }, {
+      "id": "32e420ed-afd3-4b39-88c8-4ed6ff54ad07",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=div:nth-child(1) .Status",
+      "targets": [
+        ["css=div:nth-child(1) .Status", "css:finder"],
+        ["xpath=//div[@id='Kastinzi']/div/table/tbody/tr/td[3]/div", "xpath:idRelative"],
+        ["xpath=//td[3]/div", "xpath:position"]
+      ],
+      "value": "Status prijave:\\nPrihvacen"
+    }, {
+      "id": "a555cf80-9057-41cb-be50-300a3be53d5c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=div:nth-child(1) .TitleDir h3",
+      "targets": [
+        ["css=div:nth-child(1) .TitleDir h3", "css:finder"],
+        ["xpath=//div[@id='Kastinzi']/div/table/tbody/tr/td[2]/div/div/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'mixusmaxus')]", "xpath:innerText"]
+      ],
+      "value": "mixusmaxus"
+    }]
+  }, {
+    "id": "8dc96ca7-e19b-4d1e-a826-2f8c9f75c9c7",
+    "name": "Test1 - Ispravno uneti svi podaci",
+    "commands": [{
+      "id": "1dbf073c-9625-426e-a5f0-701f63e48eba",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/RegistrovaniKorisnik",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1b1127c8-916d-4e63-9ec3-e9e8a78073e1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "926x693",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d9d3e1df-b4b7-42ac-89b7-850b694402a8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Forum",
+      "targets": [
+        ["linkText=Forum", "linkText"],
+        ["css=.SiteMenus:nth-child(3) > .SiteMenus", "css:finder"],
+        ["xpath=//a[contains(text(),'Forum')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/RegistrovaniKorisnik/prikaziTeme']", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Forum ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "15f0c1f8-a65e-4dcc-8e8f-fcba90a8a398",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=a > button",
+      "targets": [
+        ["css=a > button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/a/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Dodaj temu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "35b5dc81-eced-476f-951e-dce1f0f642c3",
+      "comment": "",
+      "command": "click",
+      "target": "css=a > button",
+      "targets": [
+        ["css=a > button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/a/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Dodaj temu')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win817",
+      "windowTimeout": 2000
+    }, {
+      "id": "daf7fa6b-05d1-414f-8d6f-3489341ea52e",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win817}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "adc679c7-6956-42cb-bc55-79b7b654dd8c",
+      "comment": "",
+      "command": "click",
+      "target": "name=naslov",
+      "targets": [
+        ["name=naslov", "name"],
+        ["css=.Title", "css:finder"],
+        ["xpath=//input[@name='naslov']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d8ff2eaa-48a8-441e-bb47-4133880a4162",
+      "comment": "",
+      "command": "type",
+      "target": "name=naslov",
+      "targets": [
+        ["name=naslov", "name"],
+        ["css=.Title", "css:finder"],
+        ["xpath=//input[@name='naslov']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "Zasto je PSI dobar predmet"
+    }, {
+      "id": "af722778-3af3-4c8a-bbbe-fa47c5203490",
+      "comment": "",
+      "command": "click",
+      "target": "name=opis",
+      "targets": [
+        ["name=opis", "name"],
+        ["css=.ShortCaption", "css:finder"],
+        ["xpath=//input[@name='opis']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "05c9c6da-21da-4f7e-98d4-201f86d9de62",
+      "comment": "",
+      "command": "type",
+      "target": "name=opis",
+      "targets": [
+        ["name=opis", "name"],
+        ["css=.ShortCaption", "css:finder"],
+        ["xpath=//input[@name='opis']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Objasnjenje Zasto je psi dobar predmet"
+    }, {
+      "id": "8fcd31a2-9cd0-4a1e-a20c-d4df2b1ee066",
+      "comment": "",
+      "command": "click",
+      "target": "id=description",
+      "targets": [
+        ["id=description", "id"],
+        ["name=description", "name"],
+        ["css=#description", "css:finder"],
+        ["xpath=//textarea[@id='description']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "72b64713-7cc3-4b58-b13d-ad9b8bace0eb",
+      "comment": "",
+      "command": "type",
+      "target": "id=description",
+      "targets": [
+        ["id=description", "id"],
+        ["name=description", "name"],
+        ["css=#description", "css:finder"],
+        ["xpath=//textarea[@id='description']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Zato sto su predavaci vrhunski"
+    }, {
+      "id": "d7e800ed-8c2d-435d-9526-f99ba8fb499f",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Postavi temu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ca97fd81-72d0-4abd-ab00-a7b985cc1a93",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=div:nth-child(3) .TitleTheme",
+      "targets": [
+        ["css=div:nth-child(3) .TitleTheme", "css:finder"],
+        ["xpath=//div[@id='content']/div[2]/div[3]/table/tbody/tr/td[2]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/table/tbody/tr/td[2]/div", "xpath:position"]
+      ],
+      "value": "Zasto je PSI dobar predmet"
+    }, {
+      "id": "9a4af11e-d8c8-479b-9f25-148f6253fc49",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=div:nth-child(3) .ShortCaption",
+      "targets": [
+        ["css=div:nth-child(3) .ShortCaption", "css:finder"],
+        ["xpath=//div[@id='content']/div[2]/div[3]/table/tbody/tr/td[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/table/tbody/tr/td[2]/div[2]", "xpath:position"]
+      ],
+      "value": "Objasnjenje Zasto je psi dobar predmet"
+    }, {
+      "id": "de06cb06-f732-4336-92ec-22af05ad50cc",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=div:nth-child(3) .button > button",
+      "targets": [
+        ["css=div:nth-child(3) .button > button", "css:finder"],
+        ["xpath=(//button[@type='submit'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div[2]/div[3]/table/tbody/tr/td[3]/form/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/table/tbody/tr/td[3]/form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "931cf30c-c7bb-43f7-917c-65fc79326836",
+    "name": "Test2 - Naslov teme nije unet",
+    "commands": [{
+      "id": "8ed7b3e8-a7ea-4022-ab33-ad0ff6116463",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/RegistrovaniKorisnik",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d1ba5fd6-53dc-4f0a-9b40-d3467c239927",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "926x693",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "23e77767-f195-4828-9f0c-a73ee6102b48",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Forum",
+      "targets": [
+        ["linkText=Forum", "linkText"],
+        ["css=.SiteMenus:nth-child(3) > .SiteMenus", "css:finder"],
+        ["xpath=//a[contains(text(),'Forum')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/RegistrovaniKorisnik/prikaziTeme']", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Forum ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b488c4ab-2e34-49fa-ba86-ab48674c08d9",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=a > button",
+      "targets": [
+        ["css=a > button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/a/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Dodaj temu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "19637199-56a1-4525-94f0-ddbc545522fe",
+      "comment": "",
+      "command": "click",
+      "target": "css=a > button",
+      "targets": [
+        ["css=a > button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/a/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Dodaj temu')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win9856",
+      "windowTimeout": 2000
+    }, {
+      "id": "93a92a75-b5ef-4855-999c-1935c3259dfe",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win9856}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fdaa0263-6920-457c-b910-d44cbe50c8d4",
+      "comment": "",
+      "command": "click",
+      "target": "name=opis",
+      "targets": [
+        ["name=opis", "name"],
+        ["css=.ShortCaption", "css:finder"],
+        ["xpath=//input[@name='opis']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "22a06c81-9ece-4ea6-9e16-880701af48a1",
+      "comment": "",
+      "command": "type",
+      "target": "name=opis",
+      "targets": [
+        ["name=opis", "name"],
+        ["css=.ShortCaption", "css:finder"],
+        ["xpath=//input[@name='opis']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Objasnjenje zasto je PSI najbolji predmet"
+    }, {
+      "id": "5fd353f8-6cd1-4b78-bf51-1c0b3c2dbeb0",
+      "comment": "",
+      "command": "click",
+      "target": "id=description",
+      "targets": [
+        ["id=description", "id"],
+        ["name=description", "name"],
+        ["css=#description", "css:finder"],
+        ["xpath=//textarea[@id='description']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "989027e0-1b0a-4cb7-a883-a3e06f4ec012",
+      "comment": "",
+      "command": "type",
+      "target": "id=description",
+      "targets": [
+        ["id=description", "id"],
+        ["name=description", "name"],
+        ["css=#description", "css:finder"],
+        ["xpath=//textarea[@id='description']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Zato sto su predavaci vrhunski!"
+    }, {
+      "id": "68e65680-a1d9-47a4-8a77-ed40c15a647e",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Postavi temu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b24c2800-1cee-4cb3-a546-c3c1de524f0a",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "name=naslov",
+      "targets": [
+        ["name=naslov", "name"],
+        ["css=.Title", "css:finder"],
+        ["xpath=//input[@name='naslov']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "53f31a5e-464a-45f0-9658-41fb631d40e9",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//div[@id='content']/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Tema')]", "xpath:innerText"]
+      ],
+      "value": "Tema"
+    }, {
+      "id": "3ed005e8-83fc-499c-ba6d-dd7b08e25159",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Postavi temu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "85cd5f91-efd2-4439-8de7-f6603dc341fe",
+    "name": "Test3 - Podnaslov teme nije unet",
+    "commands": [{
+      "id": "42cc88bd-beec-48ce-b11c-6d2d5b9d1aca",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/RegistrovaniKorisnik",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a9ea794c-915b-4222-8b92-7317af9edf92",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1401x693",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2f796bc0-6635-434a-9946-7204ca65399d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Forum",
+      "targets": [
+        ["linkText=Forum", "linkText"],
+        ["css=.SiteMenus:nth-child(3) > .SiteMenus", "css:finder"],
+        ["xpath=//a[contains(text(),'Forum')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/RegistrovaniKorisnik/prikaziTeme']", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Forum ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "76ee8da7-ea02-4f74-8c73-77e9ea48ee10",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=a > button",
+      "targets": [
+        ["css=a > button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/a/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Dodaj temu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd5b72fc-4561-4949-864b-ba785c885a4f",
+      "comment": "",
+      "command": "click",
+      "target": "css=a > button",
+      "targets": [
+        ["css=a > button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/a/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Dodaj temu')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win4646",
+      "windowTimeout": 2000
+    }, {
+      "id": "67ac4955-5b9c-4ef9-a2ad-cbdb44b61451",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win4646}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "012a0e7b-d350-493f-8d94-51bba4e407d3",
+      "comment": "",
+      "command": "click",
+      "target": "name=naslov",
+      "targets": [
+        ["name=naslov", "name"],
+        ["css=.Title", "css:finder"],
+        ["xpath=//input[@name='naslov']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "67410691-b28e-4357-818a-5c0cdd3d9c06",
+      "comment": "",
+      "command": "type",
+      "target": "name=naslov",
+      "targets": [
+        ["name=naslov", "name"],
+        ["css=.Title", "css:finder"],
+        ["xpath=//input[@name='naslov']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "Zasto je PSI dobar predmet"
+    }, {
+      "id": "86e30b9b-f94a-4a18-9ab8-d90ce0ef7d4e",
+      "comment": "",
+      "command": "click",
+      "target": "id=description",
+      "targets": [
+        ["id=description", "id"],
+        ["name=description", "name"],
+        ["css=#description", "css:finder"],
+        ["xpath=//textarea[@id='description']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4e47f4dc-91c0-45aa-a34e-d148bdb45c32",
+      "comment": "",
+      "command": "type",
+      "target": "id=description",
+      "targets": [
+        ["id=description", "id"],
+        ["name=description", "name"],
+        ["css=#description", "css:finder"],
+        ["xpath=//textarea[@id='description']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Zato sto su predavaci vrhunski"
+    }, {
+      "id": "c6590e03-f09c-4664-87e0-777481d5690b",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Postavi temu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "639fa098-ac92-49c9-b5dc-a605a6ec24fa",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=div:nth-child(3) .TitleTheme",
+      "targets": [
+        ["css=div:nth-child(3) .TitleTheme", "css:finder"],
+        ["xpath=//div[@id='content']/div[2]/div[3]/table/tbody/tr/td[2]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/table/tbody/tr/td[2]/div", "xpath:position"]
+      ],
+      "value": "Zasto je PSI dobar predmet"
+    }, {
+      "id": "4d5fb6d2-fef7-48a0-96a6-9a94c5a41049",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=div:nth-child(3) .button > button",
+      "targets": [
+        ["css=div:nth-child(3) .button > button", "css:finder"],
+        ["xpath=(//button[@type='submit'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div[2]/div[3]/table/tbody/tr/td[3]/form/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/table/tbody/tr/td[3]/form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "9c7bb610-c031-4ae4-bc89-6f1a9698a494",
+    "name": "Test4 - Tekst teme nije unet",
+    "commands": [{
+      "id": "11bf9474-57e3-4d89-a374-9d8285f91087",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/RegistrovaniKorisnik",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6b007624-341b-4ff9-aa13-86176f83d6d5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "926x693",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bd421497-895e-44af-801b-ae88fd8b213b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Forum",
+      "targets": [
+        ["linkText=Forum", "linkText"],
+        ["css=.SiteMenus:nth-child(3) > .SiteMenus", "css:finder"],
+        ["xpath=//a[contains(text(),'Forum')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/RegistrovaniKorisnik/prikaziTeme']", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Forum ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb46ac6d-935c-4695-8400-50effae24c36",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=a > button",
+      "targets": [
+        ["css=a > button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/a/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Dodaj temu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b819f1a7-400b-4a09-a60c-3c827e75f89f",
+      "comment": "",
+      "command": "click",
+      "target": "css=a > button",
+      "targets": [
+        ["css=a > button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/a/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Dodaj temu')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win3844",
+      "windowTimeout": 2000
+    }, {
+      "id": "dda59542-4068-4c13-b0b3-a4c4dac02778",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win3844}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a64b4a4a-0e4b-440b-abb8-1ae21ff62dbf",
+      "comment": "",
+      "command": "click",
+      "target": "name=naslov",
+      "targets": [
+        ["name=naslov", "name"],
+        ["css=.Title", "css:finder"],
+        ["xpath=//input[@name='naslov']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a17a392-b753-42be-b8a1-b77e5579db48",
+      "comment": "",
+      "command": "type",
+      "target": "name=naslov",
+      "targets": [
+        ["name=naslov", "name"],
+        ["css=.Title", "css:finder"],
+        ["xpath=//input[@name='naslov']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "Zasto je PSI dobar predmet"
+    }, {
+      "id": "f610aca1-ca98-425d-a16c-adf5e476a839",
+      "comment": "",
+      "command": "click",
+      "target": "name=opis",
+      "targets": [
+        ["name=opis", "name"],
+        ["css=.ShortCaption", "css:finder"],
+        ["xpath=//input[@name='opis']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eebbeae3-3cc3-450a-ab20-7703a1e7bb4e",
+      "comment": "",
+      "command": "type",
+      "target": "name=opis",
+      "targets": [
+        ["name=opis", "name"],
+        ["css=.ShortCaption", "css:finder"],
+        ["xpath=//input[@name='opis']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Detaljno objasnjenje zasto je psi dobar predmet"
+    }, {
+      "id": "4e067688-4ead-4d1a-877a-7eb8a9182da8",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Postavi temu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "73e8462f-5db8-4795-b38e-4b80de83a87b",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=div:nth-child(3) .TitleTheme",
+      "targets": [
+        ["css=div:nth-child(3) .TitleTheme", "css:finder"],
+        ["xpath=//div[@id='content']/div[2]/div[3]/table/tbody/tr/td[2]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/table/tbody/tr/td[2]/div", "xpath:position"]
+      ],
+      "value": "Zasto je PSI dobar predmet"
+    }, {
+      "id": "07144f84-1f2b-4b05-9a1e-aa871406d8b4",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=div:nth-child(3) .ShortCaption",
+      "targets": [
+        ["css=div:nth-child(3) .ShortCaption", "css:finder"],
+        ["xpath=//div[@id='content']/div[2]/div[3]/table/tbody/tr/td[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/table/tbody/tr/td[2]/div[2]", "xpath:position"]
+      ],
+      "value": "Detaljno objasnjenje zasto je psi dobar predmet"
+    }, {
+      "id": "4416b87f-8c63-4b10-afbd-2a4011bd59e6",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=div:nth-child(3) .button > button",
+      "targets": [
+        ["css=div:nth-child(3) .button > button", "css:finder"],
+        ["xpath=(//button[@type='submit'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div[2]/div[3]/table/tbody/tr/td[3]/form/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/table/tbody/tr/td[3]/form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "dafe2c8c-2d37-4199-96c9-31c254338205",
+    "name": "Test6 - Odabrana opcija: Pesme",
+    "commands": [{
+      "id": "06c6a074-7df9-4215-9b87-6afda47065e5",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/RegistrovaniKorisnik",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0f5a3736-d663-43b9-8710-a4f6a821cc14",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "926x693",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7ad8366c-f714-4553-8164-21874c886e47",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Pesme",
+      "targets": [
+        ["linkText=Pesme", "linkText"],
+        ["css=.SiteMenus:nth-child(6) > .SiteMenus", "css:finder"],
+        ["xpath=//a[contains(text(),'Pesme')]", "xpath:link"],
+        ["xpath=//a[@onclick='loadsongs()']", "xpath:attributes"],
+        ["xpath=//a[@href='http://localhost:8080/RegistrovaniKorisnik/pesme']", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Pesme')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "684ce76a-d4e4-4e73-87ad-650ae1c6e886",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pesme",
+      "targets": [
+        ["linkText=Pesme", "linkText"],
+        ["css=.SiteMenus:nth-child(6) > .SiteMenus", "css:finder"],
+        ["xpath=//a[contains(text(),'Pesme')]", "xpath:link"],
+        ["xpath=//a[@onclick='loadsongs()']", "xpath:attributes"],
+        ["xpath=//a[@href='http://localhost:8080/RegistrovaniKorisnik/pesme']", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Pesme')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7d0f9b83-32e9-4ac9-b1a8-e453da7764a0",
+      "comment": "",
+      "command": "verifyText",
+      "target": "id=69",
+      "targets": [
+        ["id=69", "id"],
+        ["css=#\\36 9", "css:finder"],
+        ["xpath=//figcaption[@id='69']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/div/div/table/tbody/tr[2]/td/figure/figcaption", "xpath:idRelative"],
+        ["xpath=//figcaption", "xpath:position"]
+      ],
+      "value": "Cherry\\nVrsta: Lirika\\nLana Del Rey"
+    }, {
+      "id": "bfa9ceb9-676a-480f-afff-796640e10b90",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=td:nth-child(1) .SongThumbnail",
+      "targets": [
+        ["css=td:nth-child(1) .SongThumbnail", "css:finder"],
+        ["xpath=//div[@id='content']/div/div/div/table/tbody/tr[2]/td/figure/video", "xpath:idRelative"],
+        ["xpath=//video", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b5c5dd4e-6091-40e9-8f5c-384acbd93711",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=72",
+      "targets": [
+        ["id=72", "id"],
+        ["css=#\\37 2", "css:finder"],
+        ["xpath=//figcaption[@id='72']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/div/div/table/tbody/tr[2]/td[2]/figure/figcaption", "xpath:idRelative"],
+        ["xpath=//td[2]/figure/figcaption", "xpath:position"]
+      ],
+      "value": "New Song\\nVrsta: Epika\\nManeskin"
+    }]
+  }, {
+    "id": "d9ac0758-827f-49ff-9e2b-5fe581ab0e8d",
+    "name": "Test7 - Odabrana opcija: Monolozi",
+    "commands": [{
+      "id": "e1ba2566-95e5-417e-8d7d-f638da75d75b",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/RegistrovaniKorisnik",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7aa2ac8e-49a5-48a7-a429-20779b05cd24",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1066",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4f1a84a9-52e7-49d9-a7ea-b035eef7e7e0",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Monolozi",
+      "targets": [
+        ["linkText=Monolozi", "linkText"],
+        ["css=.SiteMenus:nth-child(7) > .SiteMenus", "css:finder"],
+        ["xpath=//a[contains(text(),'Monolozi')]", "xpath:link"],
+        ["xpath=//a[@onclick='loadmonologs()']", "xpath:attributes"],
+        ["xpath=//a[@href='http://localhost:8080/RegistrovaniKorisnik/monolozi']", "xpath:href"],
+        ["xpath=//li[7]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Monolozi')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ebafe8f-1d81-4a06-91ce-072a4f4f43e5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Monolozi",
+      "targets": [
+        ["linkText=Monolozi", "linkText"],
+        ["css=.SiteMenus:nth-child(7) > .SiteMenus", "css:finder"],
+        ["xpath=//a[contains(text(),'Monolozi')]", "xpath:link"],
+        ["xpath=//a[@onclick='loadmonologs()']", "xpath:attributes"],
+        ["xpath=//a[@href='http://localhost:8080/RegistrovaniKorisnik/monolozi']", "xpath:href"],
+        ["xpath=//li[7]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Monolozi')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5d201a7e-62a3-412c-b8a7-df9c82b9658d",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.SongThumbnail",
+      "targets": [
+        ["css=.SongThumbnail", "css:finder"],
+        ["xpath=//div[@id='content']/div/div/div/table/tbody/tr[2]/td/figure/video", "xpath:idRelative"],
+        ["xpath=//video", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "75505d11-86bb-46b3-867f-6e82854c79ea",
+      "comment": "",
+      "command": "verifyText",
+      "target": "id=73",
+      "targets": [
+        ["id=73", "id"],
+        ["css=#\\37 3", "css:finder"],
+        ["xpath=//figcaption[@id='73']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/div/div/table/tbody/tr[2]/td/figure/figcaption", "xpath:idRelative"],
+        ["xpath=//figcaption", "xpath:position"]
+      ],
+      "value": "Hamlet\\nVrsta: Drama\\nVilijem Sekspir"
+    }]
+  }, {
+    "id": "fdde8a95-d9b1-4046-8632-10cfcdc9ffcf",
+    "name": "Test8 - Odabrana opcija: Pregled svih tema",
+    "commands": [{
+      "id": "19554639-cdd7-496b-b9d2-06fc92e572eb",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/RegistrovaniKorisnik",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bea7aee7-b503-4ff9-8670-374dd32b8f5d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1066",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4430297a-dc83-4244-8fe4-c1f40db92dd3",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "linkText=Forum",
+      "targets": [
+        ["linkText=Forum", "linkText"],
+        ["css=.SiteMenus:nth-child(3) > .SiteMenus", "css:finder"],
+        ["xpath=//a[contains(text(),'Forum')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/RegistrovaniKorisnik/prikaziTeme']", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Forum ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ca76e122-8a59-4168-837e-7cbcc2dc103a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Forum",
+      "targets": [
+        ["linkText=Forum", "linkText"],
+        ["css=.SiteMenus:nth-child(3) > .SiteMenus", "css:finder"],
+        ["xpath=//a[contains(text(),'Forum')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/RegistrovaniKorisnik/prikaziTeme']", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Forum ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a0d1d6e-dbbb-4d42-b8a7-4d0ab16bf8af",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=div:nth-child(1) button",
+      "targets": [
+        ["css=div:nth-child(1) button", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div[2]/div/table/tbody/tr/td[3]/form/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Detaljnije')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "01b180ed-a839-4851-a3f5-fadc84848911",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=div:nth-child(2) .image",
+      "targets": [
+        ["css=div:nth-child(2) .image", "css:finder"],
+        ["xpath=//div[@id='content']/div[2]/div[2]/table/tbody/tr/td/img", "xpath:idRelative"],
+        ["xpath=//div[2]/table/tbody/tr/td/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "16bed3fb-cdda-4696-8e33-c3713ea16112",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=div:nth-child(2) .TitleTheme",
+      "targets": [
+        ["css=div:nth-child(2) .TitleTheme", "css:finder"],
+        ["xpath=//div[@id='content']/div[2]/div[2]/table/tbody/tr/td[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/table/tbody/tr/td[2]/div", "xpath:position"]
+      ],
+      "value": "Reziser nije platio honorare"
+    }]
+  }, {
+    "id": "bba40430-1283-4f31-a6f4-97be6b785601",
+    "name": "Test9 - Dodavanje komentara sa tekstom",
+    "commands": [{
+      "id": "2aae78d5-1dab-4805-97ab-9733c4b3ff87",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/RegistrovaniKorisnik",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d1d8a2e2-a2b5-4fc1-9906-53d9ce5fb512",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1066",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c566aaf9-b611-4107-a57a-d0f3b7d73c28",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "linkText=Forum",
+      "targets": [
+        ["linkText=Forum", "linkText"],
+        ["css=.SiteMenus:nth-child(3) > .SiteMenus", "css:finder"],
+        ["xpath=//a[contains(text(),'Forum')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/RegistrovaniKorisnik/prikaziTeme']", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Forum ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ee96115-4c6e-4833-90f0-03a97c1006e5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Forum",
+      "targets": [
+        ["linkText=Forum", "linkText"],
+        ["css=.SiteMenus:nth-child(3) > .SiteMenus", "css:finder"],
+        ["xpath=//a[contains(text(),'Forum')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/RegistrovaniKorisnik/prikaziTeme']", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Forum ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "59e0f615-79a4-439e-afad-8eb180c29deb",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=div:nth-child(1) button",
+      "targets": [
+        ["css=div:nth-child(1) button", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div[2]/div/table/tbody/tr/td[3]/form/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Detaljnije')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a5e5a9bf-a98e-4383-aeaf-58267a9a959e",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(1) button",
+      "targets": [
+        ["css=div:nth-child(1) button", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div[2]/div/table/tbody/tr/td[3]/form/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Detaljnije')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f415c170-c8a2-4147-8671-fe0be9333f86",
+      "comment": "",
+      "command": "click",
+      "target": "id=NewComment",
+      "targets": [
+        ["id=NewComment", "id"],
+        ["name=NewComent", "name"],
+        ["css=#NewComment", "css:finder"],
+        ["xpath=//textarea[@id='NewComment']", "xpath:attributes"],
+        ["xpath=//table[@id='NewComent']/tbody/tr/td/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b6b4677-65cb-4fda-ad56-44e79635567f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=NewComment",
+      "targets": [
+        ["id=NewComment", "id"],
+        ["name=NewComent", "name"],
+        ["css=#NewComment", "css:finder"],
+        ["xpath=//textarea[@id='NewComment']", "xpath:attributes"],
+        ["xpath=//table[@id='NewComent']/tbody/tr/td/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4bb9fed-bbb8-41fd-96cd-266813b5a38d",
+      "comment": "",
+      "command": "type",
+      "target": "id=NewComment",
+      "targets": [
+        ["id=NewComment", "id"],
+        ["name=NewComent", "name"],
+        ["css=#NewComment", "css:finder"],
+        ["xpath=//textarea[@id='NewComment']", "xpath:attributes"],
+        ["xpath=//table[@id='NewComent']/tbody/tr/td/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Mislim da je ovo najgenijalnija stvar koju sam ikada procitao! :D"
+    }, {
+      "id": "d84304f7-fe3e-4f17-972f-df131b2fe7ab",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@onclick='dodajKomentar()']", "xpath:attributes"],
+        ["xpath=//table[@id='NewComent']/tbody/tr/td[2]/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Postavi komentar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cde1d3fd-f33d-42ad-9fe8-21c89d03edd8",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@onclick='dodajKomentar()']", "xpath:attributes"],
+        ["xpath=//table[@id='NewComent']/tbody/tr/td[2]/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Postavi komentar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "71501cd2-9f69-4c10-944d-005e50b42207",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=li:nth-child(10) .Comment > div",
+      "targets": [
+        ["css=li:nth-child(10) .Comment > div", "css:finder"],
+        ["xpath=//div[@id='komentari']/li/table/tbody/tr/td[2]/div", "xpath:idRelative"],
+        ["xpath=//div/li/table/tbody/tr/td[2]/div", "xpath:position"]
+      ],
+      "value": "Mislim da je ovo najgenijalnija stvar koju sam ikada procitao! :D"
+    }, {
+      "id": "ce9324d4-b1a8-404a-a785-6bf81535e817",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=li:nth-child(10) .Image",
+      "targets": [
+        ["css=li:nth-child(10) .Image", "css:finder"],
+        ["xpath=//div[@id='komentari']/li/table/tbody/tr/td/img", "xpath:idRelative"],
+        ["xpath=//div/li/table/tbody/tr/td/img", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "99ea88e7-c7ff-4c0c-b77b-05c7b9999e9a",
+    "name": "Test10 - Dodavanje komentara na forumu bez teksta",
+    "commands": [{
+      "id": "85aaaeef-80d3-4831-b53a-c4117bc82154",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/RegistrovaniKorisnik",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7ac6a97a-cfb9-4c15-bd66-36884dfec161",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1066",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "80c001b7-adf0-428b-9e05-3701ebdf93db",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "linkText=Forum",
+      "targets": [
+        ["linkText=Forum", "linkText"],
+        ["css=.SiteMenus:nth-child(3) > .SiteMenus", "css:finder"],
+        ["xpath=//a[contains(text(),'Forum')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/RegistrovaniKorisnik/prikaziTeme']", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Forum ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9914baab-ffdf-4d82-93e6-ecc6a468f908",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Forum",
+      "targets": [
+        ["linkText=Forum", "linkText"],
+        ["css=.SiteMenus:nth-child(3) > .SiteMenus", "css:finder"],
+        ["xpath=//a[contains(text(),'Forum')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/RegistrovaniKorisnik/prikaziTeme']", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Forum ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4bf2eb35-05e4-48ff-85a4-09c479cecef8",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=div:nth-child(1) button",
+      "targets": [
+        ["css=div:nth-child(1) button", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div[2]/div/table/tbody/tr/td[3]/form/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Detaljnije')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd2375e9-40e2-4a8b-9e4b-38882470a76b",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=div:nth-child(2) .image",
+      "targets": [
+        ["css=div:nth-child(2) .image", "css:finder"],
+        ["xpath=//div[@id='content']/div[2]/div[2]/table/tbody/tr/td/img", "xpath:idRelative"],
+        ["xpath=//div[2]/table/tbody/tr/td/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "701afc7f-0cba-4b67-b913-47f5c3e467c9",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(1) button",
+      "targets": [
+        ["css=div:nth-child(1) button", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div[2]/div/table/tbody/tr/td[3]/form/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Detaljnije')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "80e5beca-ccf7-4b20-8d31-7e7c0f6dbd7a",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@onclick='dodajKomentar()']", "xpath:attributes"],
+        ["xpath=//table[@id='NewComent']/tbody/tr/td[2]/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Postavi komentar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "2f571626-bece-4a50-a4a5-5d7048ccab2d",
+    "name": "Dodavanje teme na forum",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["8dc96ca7-e19b-4d1e-a826-2f8c9f75c9c7", "931cf30c-c7bb-43f7-917c-65fc79326836", "85cd5f91-efd2-4439-8de7-f6603dc341fe", "9c7bb610-c031-4ae4-bc89-6f1a9698a494"]
+  }, {
+    "id": "8f75afc0-e6fc-4c31-8552-d5e1b40a148d",
+    "name": "Prikaz kreiranih kastinga",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7aa05c30-bb24-463a-9ad9-1711d397622b"]
+  }, {
+    "id": "0d5d3c6a-7161-4efb-9c58-86bdd6ff5d41",
+    "name": "Pregled svih kreiranih pesama/monologa:",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["dafe2c8c-2d37-4199-96c9-31c254338205", "d9ac0758-827f-49ff-9e2b-5fe581ab0e8d"]
+  }, {
+    "id": "68638e11-34f4-4e8c-98f2-365187f88df6",
+    "name": "Pregled svih tema na forumu",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["fdde8a95-d9b1-4046-8632-10cfcdc9ffcf"]
+  }, {
+    "id": "a3b7b75a-6428-4c45-87c5-bbfe5cd0d740",
+    "name": "Dodavanje komentara na temu",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["bba40430-1283-4f31-a6f4-97be6b785601", "99ea88e7-c7ff-4c0c-b77b-05c7b9999e9a"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}
